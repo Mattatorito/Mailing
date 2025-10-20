@@ -1,0 +1,8 @@
+Subject: Welcome to {{company}}!
+
+Hello {{name}},
+
+Welcome to our amazing platform! We're excited to have you on board.
+
+Best regards,
+The Team

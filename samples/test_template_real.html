@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Тестовое письмо</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            color: #333; 
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .header { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px; 
+            text-align: center; 
+            border-radius: 10px 10px 0 0;
+        }
+        .content { 
+            padding: 30px 20px; 
+            background: #f8f9fa;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .footer { 
+            background-color: #343a40; 
+            color: white;
+            padding: 20px; 
+            text-align: center; 
+            font-size: 14px;
+            border-radius: 0 0 10px 10px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Тест рассылки от {{company}}</h1>
+        <p>Реальная отправка через систему</p>
+    </div>
+    
+    <div class="content">
+        <p>Привет, <strong>{{name}}!</strong></p>
+        
+        <p>Это реальное тестовое письмо из нашей системы массовых рассылок.</p>
+        
+        <div class="highlight">
+            <h3>🎉 Специальное предложение!</h3>
+            <p>У вас есть скидка <strong>{{discount}}%</strong> на наши услуги!</p>
+        </div>
+        
+        <p><strong>Что мы тестируем:</strong></p>
+        <ul>
+            <li>✅ Подключение к Resend API</li>
+            <li>✅ Загрузка данных из CSV</li>
+            <li>✅ Рендеринг шаблонов Jinja2</li>
+            <li>✅ Отправка реальных писем</li>
+            <li>✅ Обработка ошибок</li>
+            <li>✅ Статистика доставки</li>
+        </ul>
+        
+        <p><a href="#" class="button">Проверить статус</a></p>
+        
+        <p><small>Отправлено: {{current_date}} | ID: {{message_id}}</small></p>
+    </div>
+    
+    <div class="footer">
+        <p>© 2025 {{company}} | Система массовых рассылок</p>
+        <p>Это тестовое письмо для проверки функциональности</p>
+    </div>
+</body>
+</html>

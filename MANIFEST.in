@@ -1,0 +1,21 @@
+include README.md
+include LICENSE
+include .env.example
+include requirements.txt
+recursive-include samples *
+recursive-include tests *.py
+recursive-include gui *.py
+recursive-include tk_gui *.py
+recursive-include mailing *.py
+recursive-include resend *.py
+recursive-include templating *.py
+recursive-include data_loader *.py
+recursive-include persistence *.py
+recursive-include stats *.py
+recursive-include validation *.py
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude *.egg-info
+global-exclude .pytest_cache
+global-exclude .hypothesis

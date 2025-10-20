@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "professional-email-marketing-tool"
+version = "1.0.0"
+description = "Professional Email Marketing Tool - Advanced mass mailing solution with web interface, CLI, and desktop GUI"
+readme = "README.md"
+authors = [ { name = "Your Name", email = "you@example.com" } ]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["resend", "email", "mass", "async", "mailing", "webhook"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Topic :: Communications :: Email",
+]
+# Основные зависимости (минимальное пересечение с requirements.txt)
+dependencies = [
+    "httpx>=0.27.0",
+    "Jinja2>=3.1.4",
+    "python-dotenv>=1.0.1",
+    "rich>=13.7.1",
+    "openpyxl>=3.1.5",
+    "email-validator>=2.1.0.post1",
+    "pydantic>=2.8.2",
+    "aiolimiter>=1.1.0",
+    "backoff>=2.2.1",
+    "orjson>=3.10.6",
+    "fastapi>=0.111.0",
+    "uvicorn>=0.30.0",
+    "PySide6>=6.7.0",
+    "qasync>=0.25.0",
+    "customtkinter>=5.2.2",
+    "click>=8.1.0",
+]
+
+[project.scripts]
+mailing-cli = "mailing.cli:main"
+mailing-webhook = "mailing.webhook_server:run"
+mailing-gui = "gui.app:main"
+mailing-ctk-gui = "tk_gui.app:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mailing", "data_loader", "templating", "validation", "resend", "persistence", "stats", "gui", "tests", "samples"]

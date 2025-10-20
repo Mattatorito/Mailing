@@ -1,0 +1,24 @@
+{
+    "recipients": [
+        {
+            "email": "test1@example.com",
+            "name": "John Doe",
+            "company": "Acme Corp"
+        },
+        {
+            "email": "test2@example.com", 
+            "name": "Jane Smith",
+            "company": "Tech Inc"
+        },
+        {
+            "email": "test3@example.com",
+            "name": "Bob Johnson", 
+            "company": "StartupXYZ"
+        },
+        {
+            "email": "user@domain.com",
+            "name": "Alice Brown",
+            "company": "Enterprise Ltd"
+        }
+    ]
+}

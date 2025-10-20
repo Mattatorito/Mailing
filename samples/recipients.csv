@@ -1,0 +1,4 @@
+email,first_name,discount
+user1@example.com,Иван,15
+user2@example.com,Анна,20
+invalid-email,Петр,10
