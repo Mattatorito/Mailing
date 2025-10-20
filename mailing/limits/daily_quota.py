@@ -1,82 +1,112 @@
+#!/usr/bin/env python3
+
 from __future__ import annotations
-from dataclasses import dataclass, field
-from datetime import datetime, timezone, date
+from dataclasses import dataclass
+from datetime import date, datetime
+from pathlib import Path
+import sqlite3
+from typing import Optional
 
 from mailing.config import settings
-from persistence.db import get_connection
-
-_SCHEMA_QUOTA = """CREATE TABLE IF NOT EXISTS daily_usage (
-    usage_date TEXT PRIMARY KEY,
-    used INTEGER NOT NULL
-)"""
 
 
 @dataclass
 class DailyQuota:
     """Класс для работы с дневными лимитами email отправки."""
-    limit: int = settings.daily_email_limit
-    now_func: callable = field(
-        default=lambda: datetime.now(timezone.utc)
-    )  # injectable for tests
-    _used: int = field(default=0, init=False)
-    _date: date = field(default=None, init=False)
-
-    def __post_init__(self):
-        """Инициализация после создания объекта."""
-        if self._date is None:
-            self._date = self.now_func().date()
-
+    
+    used_today: int = 0
+    limit: int = 1000
+    last_updated: Optional[str] = None
+    
+    def __init__(self, limit: int = 1000):
+        """Инициализирует квоту."""
+        self.limit = limit
+        self.used_today = 0
+        self.last_updated = None
+        self._init_db()
+    
+    def _init_db(self):
+        """Инициализирует базу данных для хранения квот."""
+        db_path = Path(settings.sqlite_db_path)
+        with sqlite3.connect(db_path) as conn:
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS daily_quota (
+                    date TEXT PRIMARY KEY,
+                    used_count INTEGER DEFAULT 0,
+                    limit_count INTEGER DEFAULT 1000
+                )
+            """)
+            conn.commit()
+    
     def load(self):
-        """Загружает текущее состояние из базы данных."""
-        conn = get_connection()
-        conn.execute(_SCHEMA_QUOTA)
-        conn.commit()
-        today = self._today_str()
-        cur = conn.execute("SELECT used FROM daily_usage WHERE usage_date=?", (today,))
-        row = cur.fetchone()
-        if row:
-            self._used = int(row[0])
-        else:
+        """Загружает текущую квоту из базы данных."""
+        today = date.today().isoformat()
+        db_path = Path(settings.sqlite_db_path)
+        
+        with sqlite3.connect(db_path) as conn:
+            cursor = conn.execute(
+                "SELECT used_count, limit_count FROM daily_quota WHERE date = ?",
+                (today,)
+            )
+            row = cursor.fetchone()
+            
+            if row:
+                self.used_today, self.limit = row
+            else:
+                # Создаем запись на сегодня
+                conn.execute(
+                    "INSERT INTO daily_quota (date, used_count, limit_count) VALUES (?, ?, ?)",
+                    (today, 0, self.limit)
+                )
+                self.used_today = 0
+            
+            self.last_updated = today
+    
+    def register(self, count: int = 1):
+        """Регистрирует отправку email."""
+        today = date.today().isoformat()
+        
+        if self.last_updated != today:
+            self.load()  # Перезагружаем квоту если день изменился
+        
+        self.used_today += count
+        
+        # Обновляем в базе данных
+        db_path = Path(settings.sqlite_db_path)
+        with sqlite3.connect(db_path) as conn:
             conn.execute(
-                "INSERT OR IGNORE INTO daily_usage(usage_date, used) VALUES(?, 0)",
+                "UPDATE daily_quota SET used_count = ? WHERE date = ?",
+                (self.used_today, today)
+            )
+            conn.commit()
+    
+    def can_send(self, count: int = 1) -> bool:
+        """Проверяет, можно ли отправить указанное количество email."""
+        today = date.today().isoformat()
+        
+        if self.last_updated != today:
+            self.load()  # Перезагружаем квоту если день изменился
+        
+        return (self.used_today + count) <= self.limit
+    
+    def remaining(self) -> int:
+        """Возвращает количество оставшихся отправок на сегодня."""
+        today = date.today().isoformat()
+        
+        if self.last_updated != today:
+            self.load()
+        
+        return max(0, self.limit - self.used_today)
+    
+    def reset(self):
+        """Сбрасывает использованную квоту на 0."""
+        today = date.today().isoformat()
+        self.used_today = 0
+        
+        db_path = Path(settings.sqlite_db_path)
+        with sqlite3.connect(db_path) as conn:
+            conn.execute(
+                "UPDATE daily_quota SET used_count = 0 WHERE date = ?",
                 (today,)
             )
             conn.commit()
-        self._date = date.today()
-
-    def _today_str(self) -> str:
-        """Возвращает строковое представление сегодняшней даты."""
-        return self.now_func().date().isoformat()
-
-    def used(self) -> int:
-        """Возвращает количество использованных отправок за день."""
-        return self._used
-
-    def remaining(self) -> int:
-        """Возвращает количество оставшихся отправок."""
-        return max(0, self.limit - self._used)
-
-    def can_send(self, count: int = 1) -> bool:
-        """Проверяет можно ли отправить указанное количество писем."""
-        return self._used + count <= self.limit
-
-    def register(self, count: int = 1) -> None:
-        """Регистрирует отправку писем."""
-        if not self.can_send(count):
-            raise ValueError(f"Cannot send {count} emails, limit exceeded")
-        
-        self._used += count
-        conn = get_connection()
-        today = self._today_str()
-        conn.execute(
-            "UPDATE daily_usage SET used=? WHERE usage_date=?",
-            (self._used, today)
-        )
-        conn.commit()
-
-    def reset(self) -> None:
-        """Сбрасывает счетчик на новый день."""
-        today = self.now_func().date()
-        if self._date != today:
-            self._used = 0
-            self._date = today

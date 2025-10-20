@@ -1,11 +1,11 @@
-                import re
+        import re
 from pathlib import Path
 import json
 import os
 import sqlite3
 import sys
 
-        import traceback
+    import traceback
 from datetime import datetime
 import ast
 import subprocess
@@ -16,20 +16,18 @@ import subprocess
 Проверка всех исправлений и новая оценка проекта"""
 sys.path.append(".")
 
-
-
 def final_quality_check():"""Проверяет улучшения качества кода и системы"""
     """Выполняет final quality check."""
 print("🎯 ФИНАЛЬНАЯ ПРОВЕРКА УЛУЧШЕНИЙ")print("=" * 80)print(f"📅 Дата проверки: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")print("=" * 80)
 
     improvements = {"documentation": 0,"security": 0,"testing": 0,"automation": 0,
-        "overall_score": 0,
+    "overall_score": 0,
     }
 
     # 1. ПРОВЕРКА ДОКУМЕНТАЦИИprint("\n1️⃣ ПРОВЕРКА УЛУЧШЕНИЙ ДОКУМЕНТАЦИИ")print("-" * 60)
 
     key_files = ["mailing/sender.py","resend/client.py","persistence/db.py",
-        "templating/engine.py","persistence/repository.py",
+    "templating/engine.py","persistence/repository.py",
     ]
 
     documented_functions = 0
@@ -38,23 +36,23 @@ print("🎯 ФИНАЛЬНАЯ ПРОВЕРКА УЛУЧШЕНИЙ")print("=" * 
     for file_path in key_files:
         if Path(file_path).exists():
             try:with open(file_path, "r", encoding="utf-8") as f:
-                    content = f.read()
+                content = f.read()
 
-                tree = ast.parse(content)
+            tree = ast.parse(content)
 
                 for node in ast.walk(tree):
                     if isinstance(
-                        node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)
-                    ):
-                        total_functions += 1
-                        docstring = ast.get_docstring(node)
+                    node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)
+                ):
+                    total_functions += 1
+                    docstring = ast.get_docstring(node)
                         if docstring and len(docstring) > 50:  # Подробная документация
-                            documented_functions += 1
+                        documented_functions += 1
 
-                # Проверяем module docstring
-                module_docstring = ast.get_docstring(tree)
+            # Проверяем module docstring
+            module_docstring = ast.get_docstring(tree)
                 if module_docstring:print(f"   ✅ {file_path}: module docstring найден")
-                else:print(f"   ⚠️ {file_path}: module docstring отсутствует")
+            else:print(f"   ⚠️ {file_path}: module docstring отсутствует")
 
             except Exception as e:print(f"   ❌ Ошибка анализа {file_path}: {e}")
 
@@ -73,29 +71,29 @@ print("🎯 ФИНАЛЬНАЯ ПРОВЕРКА УЛУЧШЕНИЙ")print("=" * 
     security_score = 0
 
     # Проверяем security модульif Path("security/__init__.py").exists():
-        security_score += 40print("   ✅ Security модуль создан")
+    security_score += 40print("   ✅ Security модуль создан")
 
-        # Проверяем размер модуля безопасностиsize = Path("security/__init__.py").stat().st_size
+    # Проверяем размер модуля безопасностиsize = Path("security/__init__.py").stat().st_size
         if size > 10000:  # > 10KB
-            security_score += 20print(f"   ✅ Комплексный security модуль: {size} байт")
+        security_score += 20print(f"   ✅ Комплексный security модуль: {size} байт")
 
     # Проверяем использование security в коде
     security_imports = 0for py_file in Path(".").rglob("*.py"):if ".venv" in str(py_file) or "htmlcov" in str(py_file):
-            continue
+        continue
         try:with open(py_file, "r", encoding="utf-8") as f:
                 content = f.read()if "from security import" in content or "import security" in content:
-                security_imports += 1
+            security_imports += 1
         except:
-            pass
+        pass
 
     if security_imports > 0:
-        security_score += 20print(f"   ✅ Security используется в {security_imports} файлах")
+    security_score += 20print(f"   ✅ Security используется в {security_imports} файлах")
 
     # Проверяем переменные окруженияenv_vars = ["RESEND_API_KEY", "RESEND_FROM_EMAIL"]
     configured_vars = sum(1 for var in env_vars if os.environ.get(var))
 
     if configured_vars == len(env_vars):
-        security_score += 20print("   ✅ Все переменные окружения настроены")
+    security_score += 20print("   ✅ Все переменные окружения настроены")
 improvements["security"] = security_scoreprint(f"\n📊 ОЦЕНКА БЕЗОПАСНОСТИ: {security_score}/100")
 
     # 3. ПРОВЕРКА ТЕСТИРОВАНИЯprint(f"\n3️⃣ ПРОВЕРКА ТЕСТИРОВАНИЯ")print("-" * 60)
@@ -104,39 +102,39 @@ improvements["security"] = security_scoreprint(f"\n📊 ОЦЕНКА БЕЗОП�
 
     # Запускаем тесты
     try:
-        result = subprocess.run(
-            [".venv/bin/python","-m","pytest","tests/","--tb = no","-q","--maxfail = 1",
-            ],
-            capture_output = True,
-            text = True,
-            timeout = 60,
-        )
+    result = subprocess.run(
+        [".venv/bin/python","-m","pytest","tests/","--tb = no","-q","--maxfail = 1",
+        ],
+        capture_output = True,
+        text = True,
+        timeout = 60,
+    )
 
         if result.returncode == 0:
-            testing_score += 60print("   ✅ Все тесты проходят успешно")
+        testing_score += 60print("   ✅ Все тесты проходят успешно")
 
-            # Парсим результаты pytest
+        # Парсим результаты pytest
             output = result.stdoutif "passed" in output:
 match = re.search(r"(\d+) passed", output)
                 if match:
-                    passed_tests = int(match.group(1))print(f"   ✅ Прошло тестов: {passed_tests}")
+                passed_tests = int(match.group(1))print(f"   ✅ Прошло тестов: {passed_tests}")
 
                     if passed_tests >= 150:
-                        testing_score += 30
+                    testing_score += 30
                     elif passed_tests >= 100:
-                        testing_score += 20
-                    else:
-                        testing_score += 10
-        else:
-            testing_score += 30print("   ⚠️ Некоторые тесты не проходят")
+                    testing_score += 20
+                else:
+                    testing_score += 10
+    else:
+        testing_score += 30print("   ⚠️ Некоторые тесты не проходят")
 
     except subprocess.TimeoutExpired:
-        testing_score += 20print("   ⚠️ Тесты выполняются слишком долго")
+    testing_score += 20print("   ⚠️ Тесты выполняются слишком долго")
     except Exception as e:
-        testing_score += 10print(f"   ❌ Ошибка запуска тестов: {e}")
+    testing_score += 10print(f"   ❌ Ошибка запуска тестов: {e}")
 
     # Проверяем pytest.iniif Path("pytest.ini").exists():
-        testing_score += 10print("   ✅ pytest.ini настроен")
+    testing_score += 10print("   ✅ pytest.ini настроен")
 improvements["testing"] = testing_scoreprint(f"\n📊 ОЦЕНКА ТЕСТИРОВАНИЯ: {testing_score}/100")
 
     # 4. ПРОВЕРКА АВТОМАТИЗАЦИИprint(f"\n4️⃣ ПРОВЕРКА АВТОМАТИЗАЦИИ")print("-" * 60)
@@ -144,12 +142,12 @@ improvements["testing"] = testing_scoreprint(f"\n📊 ОЦЕНКА ТЕСТИР�
     automation_score = 0
 
     # Проверяем Makefileif Path("Makefile").exists():
-        automation_score += 50print("   ✅ Makefile создан")
+    automation_score += 50print("   ✅ Makefile создан")
 with open("Makefile", "r") as f:
-            makefile_content = f.read()
+        makefile_content = f.read()
 commands = ["test","lint","format","security","clean", "install"]found_commands = sum(1 for cmd in commands if f"{cmd}:" in makefile_content)
 
-        automation_score += (found_commands / len(commands)) * 50print(f"   ✅ Команд в Makefile: {found_commands}/{len(commands)}")
+    automation_score += (found_commands / len(commands)) * 50print(f"   ✅ Команд в Makefile: {found_commands}/{len(commands)}")
 improvements["automation"] = automation_scoreprint(f"\n📊 ОЦЕНКА АВТОМАТИЗАЦИИ: {automation_score}/100")
 
     # 5. ОБЩАЯ ОЦЕНКАprint(f"\n5️⃣ ИТОГОВАЯ ОЦЕНКА УЛУЧШЕНИЙ")print("=" * 80)
@@ -162,7 +160,7 @@ print(f"\n🎯 ОБЩАЯ ОЦЕНКА УЛУЧШЕНИЙ: {overall_score:.1f}/1
 
     # Сравнение с предыдущими результатами
     previous_scores = {"code_quality": 30,# Было"testing": 40,# Было"security": 80,
-        # Было"overall": 88.6,  # Было
+    # Было"overall": 88.6,  # Было
     }
 print(f"\n📈 СРАВНЕНИЕ С ПРЕДЫДУЩИМ АУДИТОМ:")
     print(f"   Качество кода: {previous_scores['code_quality']} → {improvements['documentation']:.0f} "f"({'🟢 +' + str(int(improvements['documentation'] - previous_scores['code_quality'])) if improvements['documentation'] > previous_scores['code_quality'] else '🔴 ' + str(int(improvements['documentation'] - previous_scores['code_quality']))})"
@@ -216,13 +214,13 @@ print("=" * 80)
 
 if __name__ == "__main__":
     try:
-        results = final_quality_check()
+    results = final_quality_check()
 
-        # Сохраняем результатыtimestamp = datetime.now().strftime("%Y%m%d_%H%M%S")results_file = f"improvement_results_{timestamp}.json"
+    # Сохраняем результатыtimestamp = datetime.now().strftime("%Y%m%d_%H%M%S")results_file = f"improvement_results_{timestamp}.json"
 with open(results_file, "w", encoding="utf-8") as f:
-            json.dump(results, f, ensure_ascii = False, indent = 2)
+        json.dump(results, f, ensure_ascii = False, indent = 2)
 print(f"\n💾 РЕЗУЛЬТАТЫ СОХРАНЕНЫ: {results_file}")
 
     except Exception as e:print(f"\n💥 ОШИБКА ПРОВЕРКИ: {e}")
 
-        traceback.print_exc()
+    traceback.print_exc()

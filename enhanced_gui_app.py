@@ -21,9 +21,6 @@ from gui.theme import ThemeManager
 - Просмотр логов и статистики
 - Управление шаблонами"""
 
-
-
-
 def main():"""Запуск улучшенного GUI приложения"""
     """Выполняет main."""
     app = QApplication(sys.argv)
@@ -55,11 +52,11 @@ def main():"""Запуск улучшенного GUI приложения"""
     # Запуск приложения
     with loop:
         try:
-            loop.run_forever()
+        loop.run_forever()
         except KeyboardInterrupt:
-            pass
-        finally:
-            window.close()
+        pass
+    finally:
+        window.close()
 
 if __name__ == "__main__":
     main()

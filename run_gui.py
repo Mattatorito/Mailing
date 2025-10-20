@@ -3,60 +3,54 @@ from pathlib import Path
 import os
 import sys
 
-        from interactive_run import main as interactive_main
+    from interactive_run import main as interactive_main
 import subprocess
 
-        from enhanced_gui_app import main
-        from gui.app import main
+    from enhanced_gui_app import main
+    from gui.app import main
 
 #!/usr/bin/env python3
 """
 Универсальная точка входа для запуска приложения"""
 
-
 # Добавляем текущую директорию в путь
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
 
 def try_web_gui():"""Попытка запуска веб-интерфейса"""
     """Выполняет try web gui."""
     try:print("🌐 Запуск веб-интерфейса...")print("📍 Откроется в браузере: http://localhost:5001")
 
-        # Запускаем веб-интерфейс
-        subprocess.run([sys.executable,"minimal_web_gui.py"], cwd = Path(__file__).parent
-        )
+    # Запускаем веб-интерфейс
+    subprocess.run([sys.executable,"minimal_web_gui.py"], cwd = Path(__file__).parent
+    )
         return True
     except Exception as e:print(f"❌ Веб-интерфейс не работает: {e}")
         return False
-
 
 def try_enhanced_gui():"""Попытка запуска улучшенного GUI"""
     """Выполняет try enhanced gui."""
     try:
 print("✅ Запуск улучшенного GUI приложения...")
-        main()
+    main()
         return True
     except Exception as e:print(f"❌ Улучшенное GUI не работает: {e}")
         return False
-
 
 def try_basic_gui():"""Попытка запуска базового GUI"""
     """Выполняет try basic gui."""
     try:
 print("✅ Запуск основного GUI приложения...")
-        main()
+    main()
         return True
     except Exception as e:print(f"❌ Основное GUI не работает: {e}")
         return False
-
 
 def run_interactive_cli():"""Запуск интерактивной CLI версии"""
     """Выполняет run interactive cli."""
     try:print("💻 Запуск интерактивной CLI версии...")
 
-        interactive_main()
+    interactive_main()
     except Exception as e:print(f"❌ Интерактивная CLI не работает: {e}")print("\n💡 Используйте команды напрямую:")print("python -m mailing.cli --help")
-
 
 def main():"""Главная функция с выбором интерфейса"""print("🚀 Универсальный запуск приложения для почтовой рассылки")print("=" * 60)
     """Выполняет main."""
@@ -79,19 +73,19 @@ options.append(("4", "💻 Интерактивная консоль", run_inter
 print(f"{len(options) + 1}. ❌ Выход")
 
         try:
-            choice = input(f"\nВыберите вариант (1-{len(options) + 1}) или нажмите Enter для автоматического выбора: "
-            ).strip()
+        choice = input(f"\nВыберите вариант (1-{len(options) + 1}) или нажмите Enter для автоматического выбора: "
+        ).strip()
 if choice == "":
-                # Автоматический выбор - пробуем по порядкуprint("🔄 Автоматический выбор лучшего варианта...")
+            # Автоматический выбор - пробуем по порядкуprint("🔄 Автоматический выбор лучшего варианта...")
                 for _, desc, func in options:print(f"Попытка: {desc}")
                     if func():
                         return
 
             elif choice.isdigit():
-                choice_num = int(choice)
+            choice_num = int(choice)
                 if 1 <= choice_num <= len(options):
-                    _, desc, func = options[choice_num - 1]print(f"Запуск: {desc}")
-                    func()
+                _, desc, func = options[choice_num - 1]print(f"Запуск: {desc}")
+                func()
                     return
                 elif choice_num == len(options) + 1:print("👋 До свидания!")
                     return

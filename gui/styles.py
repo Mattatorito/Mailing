@@ -7,30 +7,29 @@ LIGHT_BG = QColor(245, 246, 248)
 DARK_BG = QColor(28, 29, 31)
 ACCENT = QColor(0, 122, 255)
 
-
 def apply_palette(app, dark: bool):
     """выполняет apply palette.
 
-    Args:
-        app: Параметр для app
-        dark: Параметр для dark"""
-    pal = QPalette()
+Args:
+    app: Параметр для app
+    dark: Параметр для dark"""
+pal = QPalette()
     if dark:
-        pal.setColor(QPalette.Window, DARK_BG)
-        pal.setColor(QPalette.Base, QColor(40, 41, 43))
-        pal.setColor(QPalette.AlternateBase, QColor(46, 47, 49))
-        pal.setColor(QPalette.Text, QColor(230, 231, 232))
-        pal.setColor(QPalette.WindowText, QColor(230, 231, 232))
-        pal.setColor(QPalette.Button, QColor(52, 53, 55))
-        pal.setColor(QPalette.ButtonText, QColor(235, 235, 235))
+    pal.setColor(QPalette.Window, DARK_BG)
+    pal.setColor(QPalette.Base, QColor(40, 41, 43))
+    pal.setColor(QPalette.AlternateBase, QColor(46, 47, 49))
+    pal.setColor(QPalette.Text, QColor(230, 231, 232))
+    pal.setColor(QPalette.WindowText, QColor(230, 231, 232))
+    pal.setColor(QPalette.Button, QColor(52, 53, 55))
+    pal.setColor(QPalette.ButtonText, QColor(235, 235, 235))
     else:
-        pal.setColor(QPalette.Window, LIGHT_BG)
-        pal.setColor(QPalette.Base, QColor(255, 255, 255))
-        pal.setColor(QPalette.AlternateBase, QColor(250, 250, 251))
-        pal.setColor(QPalette.Text, QColor(30, 30, 32))
-        pal.setColor(QPalette.WindowText, QColor(30, 30, 32))
-        pal.setColor(QPalette.Button, QColor(255, 255, 255))
-        pal.setColor(QPalette.ButtonText, QColor(30, 30, 32))
+    pal.setColor(QPalette.Window, LIGHT_BG)
+    pal.setColor(QPalette.Base, QColor(255, 255, 255))
+    pal.setColor(QPalette.AlternateBase, QColor(250, 250, 251))
+    pal.setColor(QPalette.Text, QColor(30, 30, 32))
+    pal.setColor(QPalette.WindowText, QColor(30, 30, 32))
+    pal.setColor(QPalette.Button, QColor(255, 255, 255))
+    pal.setColor(QPalette.ButtonText, QColor(30, 30, 32))
     pal.setColor(QPalette.Highlight, ACCENT)
     pal.setColor(QPalette.HighlightedText, QColor(Qt.white))
     app.setPalette(pal)

@@ -3,7 +3,7 @@ import sys
 
 from datetime import datetime
 
-        from templating.engine import TemplateEngine
+    from templating.engine import TemplateEngine
 from mailing.config import settings
 from mailing.limits.daily_quota import DailyQuota
 from persistence.db import get_connection
@@ -13,8 +13,6 @@ from persistence.repository import DeliveryRepository, SuppressionRepository
 """
 Демонстрация всех реальных данных в системе"""
 sys.path.append(".")
-
-
 
 def show_system_status():"""Показать полный статус системы с реальными данными"""
     """Выполняет show system status."""
@@ -38,7 +36,7 @@ cursor.execute("SELECT COUNT(*) FROM deliveries WHERE success = 0")
     failed_count = cursor.fetchone()[0]print(f"   ❌ Неудачных: {failed_count}")
 
     if deliveries_count > 0:
-        success_rate = (success_count / deliveries_count) * 100print(f"   📈 Успешность: {success_rate:.1f}%")
+    success_rate = (success_count / deliveries_count) * 100print(f"   📈 Успешность: {success_rate:.1f}%")
 cursor.execute("SELECT COUNT(*) FROM unsubscribes")
     unsubscribes_count = cursor.fetchone()[0]print(f"   🚫 Отписок: {unsubscribes_count}")
 cursor.execute("SELECT COUNT(*) FROM suppressions")
@@ -72,25 +70,24 @@ cursor.execute("SELECT COUNT(*) FROM events")
     # Провайдерыprint(f"\n🌐 ПРОВАЙДЕРЫ ОТПРАВКИ:")print(f"   📮 Resend API: Активен")print(f"   🔗 Base URL: {settings.resend_base_url}")print(f"   ⚡ Max retries: {settings.max_retries}")
 print("=" * 80)print("💡 ВСЕ ДАННЫЕ ВЫШЕ - РЕАЛЬНЫЕ ИЗ РАБОЧЕЙ СИСТЕМЫ!")print("=" * 80)
 
-
 def show_template_preview():"""Показать предпросмотр шаблона с реальными данными"""
     """Выполняет show template preview."""
 print("\n" + "=" * 60)print("📄 ПРЕДПРОСМОТР ШАБЛОНА С РЕАЛЬНЫМИ ДАННЫМИ")print("=" * 60)
 
     try:
 
-        engine = TemplateEngine()
+    engine = TemplateEngine()
 
-        # Реальные тестовые данные
-        test_data = {"name": "Александр","company": "Тестовая Компания","discount": "30",
-            "current_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "message_id": "test_12345",
-        }
+    # Реальные тестовые данные
+    test_data = {"name": "Александр","company": "Тестовая Компания","discount": "30",
+        "current_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "message_id": "test_12345",
+    }
 
-        # Рендерим шаблонrender_result = engine.render("test_template_real.html", test_data)
-        html_content = render_result.body_html
+    # Рендерим шаблонrender_result = engine.render("test_template_real.html", test_data)
+    html_content = render_result.body_html
 
-        # Показываем начало HTMLprint("📝 Содержимое HTML (первые 500 символов):")print("-" * 40)print(html_content[:500] + "...")print("-" * 40)
+    # Показываем начало HTMLprint("📝 Содержимое HTML (первые 500 символов):")print("-" * 40)print(html_content[:500] + "...")print("-" * 40)
 print(f"📏 Полная длина: {len(html_content)} символов")print("✅ Шаблон успешно обработан с реальными данными")
 
     except Exception as e:print(f"❌ Ошибка обработки шаблона: {e}")

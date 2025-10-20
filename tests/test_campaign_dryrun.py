@@ -8,16 +8,16 @@ from mailing.sender import run_campaign
 
 @pytest.mark.asyncio
 async def test_run_campaign_dry_run():
-"""Тест для run campaign dry run."""
+    """Тест для run campaign dry run."""
 recipients = [
-    Recipient(email = f"u{i}@ex.com", variables={"name": f"User{i}"})
+Recipient(email = f"u{i}@ex.com", variables={"name": f"User{i}"})
     for i in range(3)
 ]
 events = []
 async for ev in run_campaign(
-    recipients=recipients,
-    template_name="template.html",
-    subject="Hello",
+recipients=recipients,
+template_name="template.html",
+subject="Hello",
     dry_run=True,
     concurrency=2,
 ):

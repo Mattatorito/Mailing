@@ -1,39 +1,70 @@
+#!/usr/bin/env python3
+
 from __future__ import annotations
-from typing import List
-
-from openpyxl import load_workbook
-
-from .base import DataLoader
+import os
+from typing import List, Dict, Any
+from data_loader.base import DataLoader
 from mailing.models import Recipient
 
+try:
+    import pandas as pd
+    PANDAS_AVAILABLE = True
+except ImportError:
+    PANDAS_AVAILABLE = False
+
+
 class ExcelLoader(DataLoader):
-    """Класс ExcelLoader наследующий от DataLoader."""
-    def load(self, path: str) -> List[Recipient]:"""выполняет load."
-        """Выполняет load."""
-
-    Args:
-        path: Параметр для path
-
-    Returns:
-        <ast.Subscript object at 0x109b29700>: Результат выполнения операции""""
-        wb = load_workbook(path, read_only = True, data_only = True)
-        ws = wb.active
-        rows = list(ws.iter_rows(values_only = True))
-        if not rows:
-            return []
-        headers = [str(h).strip() for h in rows[0]]if "email" not in headers:raise ValueError("XLSX must contain 'email' column")email_idx = headers.index("email")
-        recipients: List[Recipient] = []
-        for row in rows[1:]:
-            if row is None:
+    """Загрузчик данных из Excel файлов."""
+    
+    def validate_source(self, source: str) -> bool:
+        """Проверяет корректность Excel файла."""
+        if not PANDAS_AVAILABLE:
+            return False
+        
+        return (os.path.exists(source) and 
+                source.endswith(('.xlsx', '.xls', '.xlsm')))
+    
+    def load(self, source: str) -> List[Recipient]:
+        """Загружает получателей из Excel файла."""
+        if not PANDAS_AVAILABLE:
+            raise ImportError("pandas не установлен. Установите: pip install pandas openpyxl")
+        
+        if not self.validate_source(source):
+            raise ValueError(f"Некорректный Excel файл: {source}")
+        
+        recipients = []
+        
+        # Читаем Excel файл
+        df = pd.read_excel(source)
+        
+        # Ищем колонку с email
+        email_column = self._find_email_column(df.columns)
+        if not email_column:
+            raise ValueError("Не найдена колонка с email адресами")
+        
+        for _, row in df.iterrows():
+            email = str(row[email_column]).strip()
+            if not email or email == 'nan':
                 continue
-            email_val = row[email_idx]
-            if not email_val:
-                continue
-            email = str(email_val).strip()
-            variables = {}
-            for i in range(len(headers)):
-                if i != email_idx and i < len(row):
-                    # Включаем все колонки, даже с None значениями
-                    variables[headers[i]] = row[i]
-            recipients.append(self.build_recipient(email, variables))
+            
+            # Преобразуем строку в словарь
+            row_data = row.to_dict()
+            recipient = self._create_recipient(email, row_data)
+            recipients.append(recipient)
+        
         return recipients
+    
+    def _find_email_column(self, columns) -> str:
+        """Находит колонку с email адресами."""
+        email_candidates = ['email', 'Email', 'EMAIL', 'e-mail', 'E-mail']
+        
+        for candidate in email_candidates:
+            if candidate in columns:
+                return candidate
+        
+        # Ищем колонку содержащую 'email' в названии
+        for col in columns:
+            if 'email' in str(col).lower():
+                return col
+        
+        return ""

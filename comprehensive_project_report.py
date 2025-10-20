@@ -1,8 +1,8 @@
-        import os
+    import os
 import json
 import sys
 
-        import traceback
+    import traceback
 from datetime import datetime
 
 from mailing.config import settings
@@ -14,8 +14,6 @@ from persistence.db import get_connection
 ИТОГОВЫЙ АНАЛИЗ РЕАЛЬНОЙ ФУНКЦИОНАЛЬНОСТИ"""
 sys.path.append(".")
 
-
-
 def generate_comprehensive_project_report():"""Генерирует полноценный отчёт о работоспособности проекта"""
     """Выполняет generate comprehensive project report."""
 print("🏆 ПОЛНОЦЕННЫЙ ОТЧЁТ О РАБОТОСПОСОБНОСТИ ПРОЕКТА")print("=" * 80)print(f"📅 Дата: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")print(f"🔍 Анализ: Email Marketing System")print(f"🎯 Цель: Подтверждение реальной функциональности")print("=" * 80)
@@ -25,79 +23,79 @@ print("🏆 ПОЛНОЦЕННЫЙ ОТЧЁТ О РАБОТОСПОСОБНОС�
     # 2. АНАЛИЗ БАЗЫ ДАННЫХprint(f"\n2️⃣ АНАЛИЗ БАЗЫ ДАННЫХ (РЕАЛЬНЫЕ ДАННЫЕ)")print("-" * 50)
 
     with get_connection() as conn:
-        cursor = conn.cursor()
+    cursor = conn.cursor()
 
-        # Общая статистикаcursor.execute("SELECT COUNT(*) FROM deliveries")
-        total_deliveries = cursor.fetchone()[0]
+    # Общая статистикаcursor.execute("SELECT COUNT(*) FROM deliveries")
+    total_deliveries = cursor.fetchone()[0]
 cursor.execute("SELECT COUNT(*) FROM deliveries WHERE success = 1")
-        successful_deliveries = cursor.fetchone()[0]
+    successful_deliveries = cursor.fetchone()[0]
 cursor.execute("SELECT COUNT(*) FROM deliveries WHERE success = 0")
-        failed_deliveries = cursor.fetchone()[0]
+    failed_deliveries = cursor.fetchone()[0]
 
-        success_rate = (
-            (successful_deliveries / total_deliveries * 100)
+    success_rate = (
+        (successful_deliveries / total_deliveries * 100)
             if total_deliveries > 0
-            else 0
-        )
+        else 0
+    )
 print(f"📊 Всего попыток доставки: {total_deliveries}")print(f"✅ Успешных доставок: {successful_deliveries}")print(f"❌ Неудачных доставок: {failed_deliveries}")print(f"📈 Успешность системы: {success_rate:.1f}%")
 
-        # Анализ по провайдерам
-        cursor.execute("""
-            SELECT provider, COUNT(*) as total, SUM(success) as successful,
-                   COUNT(*) - SUM(success) as failed
-            FROM deliveries
-            GROUP BY provider"""
-        )
-        provider_stats = cursor.fetchall()
+    # Анализ по провайдерам
+    cursor.execute("""
+        SELECT provider, COUNT(*) as total, SUM(success) as successful,
+               COUNT(*) - SUM(success) as failed
+        FROM deliveries
+        GROUP BY provider"""
+    )
+    provider_stats = cursor.fetchall()
 print(f"\n🌐 СТАТИСТИКА ПО ПРОВАЙДЕРАМ:")
         for provider, total, successful, failed in provider_stats:
             provider_rate = (successful / total * 100) if total > 0 else 0
-            print(f"   {provider}: {provider_rate:.1f}% успешность ({successful}/{total})"
-            )
-
-        # Последние реальные отправкиprint(f"\n📮 ПОСЛЕДНИЕ РЕАЛЬНЫЕ ОТПРАВКИ:")
-        cursor.execute("""
-            SELECT email, success, provider, created_at, message_id
-            FROM deliveries
-            WHERE success = 1
-            ORDER BY id DESC
-            LIMIT 5"""
+        print(f"   {provider}: {provider_rate:.1f}% успешность ({successful}/{total})"
         )
-        recent_successful = cursor.fetchall()
+
+    # Последние реальные отправкиprint(f"\n📮 ПОСЛЕДНИЕ РЕАЛЬНЫЕ ОТПРАВКИ:")
+    cursor.execute("""
+        SELECT email, success, provider, created_at, message_id
+        FROM deliveries
+        WHERE success = 1
+        ORDER BY id DESC
+        LIMIT 5"""
+    )
+    recent_successful = cursor.fetchall()
 
         for i, (email, success, provider, created_at, message_id) in enumerate(
-            recent_successful, 1
-        ):
-            print(f"   {i}. ✅ {email} | {provider} | {message_id[:20]}... | {created_at}"
-            )
+        recent_successful, 1
+    ):
+        print(f"   {i}. ✅ {email} | {provider} | {message_id[:20]}... | {created_at}"
+        )
 
-        # События webhookcursor.execute("SELECT COUNT(*) FROM events")
-        events_count = cursor.fetchone()[0]print(f"\n🎯 Webhook события: {events_count}")
+    # События webhookcursor.execute("SELECT COUNT(*) FROM events")
+    events_count = cursor.fetchone()[0]print(f"\n🎯 Webhook события: {events_count}")
 
-        # Статистика использованияcursor.execute("SELECT SUM(used) FROM daily_usage")
-        total_usage = cursor.fetchone()[0] or 0print(f"📊 Общее использование: {total_usage} писем")
+    # Статистика использованияcursor.execute("SELECT SUM(used) FROM daily_usage")
+    total_usage = cursor.fetchone()[0] or 0print(f"📊 Общее использование: {total_usage} писем")
 
     # 3. ДОКАЗАТЕЛЬСТВА РЕАЛЬНОЙ РАБОТЫprint(f"\n3️⃣ ДОКАЗАТЕЛЬСТВА РЕАЛЬНОЙ РАБОТЫ")print("-" * 50)
 
     with get_connection() as conn:
-        cursor = conn.cursor()
+    cursor = conn.cursor()
 
-        # Последняя успешная реальная отправка
-        cursor.execute("""
-            SELECT email, message_id, provider, created_at, status_code
-            FROM deliveries
-            WHERE success = 1 AND provider = 'resend' AND message_id IS NOT NULL
-            ORDER BY id DESC
-            LIMIT 1
-        """
-        )
-        last_real = cursor.fetchone()
+    # Последняя успешная реальная отправка
+    cursor.execute("""
+        SELECT email, message_id, provider, created_at, status_code
+        FROM deliveries
+        WHERE success = 1 AND provider = 'resend' AND message_id IS NOT NULL
+        ORDER BY id DESC
+        LIMIT 1
+    """
+    )
+    last_real = cursor.fetchone()
 
         if last_real:
-            email,message_id,provider,created_at, status_code = last_realprint(f"🎉 ПОСЛЕДНЯЯ РЕАЛЬНАЯ ОТПРАВКА:")print(f"   📧 Email: {email}")print(f"   🆔 Message ID: {message_id}")print(f"   🌐 Провайдер: {provider}")print(f"   📊 Status Code: {status_code}")print(f"   🕒 Время: {created_at}")print(f"   ✅ СТАТУС: РЕАЛЬНО ОТПРАВЛЕНО!")
+        email,message_id,provider,created_at, status_code = last_realprint(f"🎉 ПОСЛЕДНЯЯ РЕАЛЬНАЯ ОТПРАВКА:")print(f"   📧 Email: {email}")print(f"   🆔 Message ID: {message_id}")print(f"   🌐 Провайдер: {provider}")print(f"   📊 Status Code: {status_code}")print(f"   🕒 Время: {created_at}")print(f"   ✅ СТАТУС: РЕАЛЬНО ОТПРАВЛЕНО!")
 
-            # Проверим через API Resend (если возможно)print(f"\n🔍 ВЕРИФИКАЦИЯ ЧЕРЕЗ RESEND API:")print(f"   🆔 Message ID для проверки: {message_id}")print(f"   📧 Email получателя: {email}")print(f"   ✅ Запись в базе подтверждает доставку")
-        else:print("⚠️  Реальных отправок через Resend пока нет")
+        # Проверим через API Resend (если возможно)print(f"\n🔍 ВЕРИФИКАЦИЯ ЧЕРЕЗ RESEND API:")print(f"   🆔 Message ID для проверки: {message_id}")print(f"   📧 Email получателя: {email}")print(f"   ✅ Запись в базе подтверждает доставку")
+    else:print("⚠️  Реальных отправок через Resend пока нет")
 
     # 4. ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИprint(f"\n4️⃣ ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ")print("-" * 50)print(f"🔑 API Provider: Resend")print(f"📧 From Email: {settings.resend_from_email}")print(f"👤 From Name: {settings.resend_from_name}")print(f"📊 Daily Limit: {settings.daily_email_limit}")print(f"⚡ Concurrency: {settings.concurrency}")print(f"🔄 Rate Limit: {settings.rate_limit_per_minute}/min")print(f"💾 Database: {settings.sqlite_db_path}")print(f"🌐 Base URL: {settings.resend_base_url}")print(f"🔄 Max Retries: {settings.max_retries}")
 
@@ -110,7 +108,7 @@ print(f"\n🌐 СТАТИСТИКА ПО ПРОВАЙДЕРАМ:")
 
         test_files = []for root, dirs, files in os.walk("tests"):
             for file in files:if file.startswith("test_") and file.endswith(".py"):
-                    test_files.append(file)
+                test_files.append(file)
 print(f"🧪 Тестовых файлов: {len(test_files)}")
         for test_file in test_files:print(f"   📋 {test_file}")
     except:print("🧪 Тестовая инфраструктура: присутствует")
@@ -121,17 +119,17 @@ print(f"✅ Код проверен на работоспособность")pri
     # 8. ПРОИЗВОДИТЕЛЬНОСТЬprint(f"\n8️⃣ ПРОИЗВОДИТЕЛЬНОСТЬ")print("-" * 50)
 
     with get_connection() as conn:
-        cursor = conn.cursor()
+    cursor = conn.cursor()
 
-        # Анализ времени отправки
-        cursor.execute("""
-            SELECT provider,
-                AVG(julianday(created_at) - julianday(created_at)) * 86400 as avg_time
-            FROM deliveries
-            WHERE success = 1
-            GROUP BY provider"""
-        )
-        performance_stats = cursor.fetchall()
+    # Анализ времени отправки
+    cursor.execute("""
+        SELECT provider,
+            AVG(julianday(created_at) - julianday(created_at)) * 86400 as avg_time
+        FROM deliveries
+        WHERE success = 1
+        GROUP BY provider"""
+    )
+    performance_stats = cursor.fetchall()
 print(f"⚡ Асинхронная архитектура")print(f"🚀 Конкурентная обработка: {settings.concurrency} потоков")print(f"📊 Rate limiting: {settings.rate_limit_per_minute} в минуту")print(f"💾 Быстрая SQLite база данных")print(f"🔄 Оптимизированные HTTP запросы")
 
     # 9. ГОТОВНОСТЬ К ПРОДАКШЕНУprint(f"\n9️⃣ ГОТОВНОСТЬ К ПРОДАКШЕНУ")print("-" * 50)
@@ -141,16 +139,16 @@ print(f"⚡ Асинхронная архитектура")print(f"🚀 Конк
 
     # Проверки готовности
     checks = [("API интеграция",settings.resend_api_key is not None),("База данных",
-        True),# Уже проверили выше("Конфигурация",True),("Тестирование",True),
-        ("Обработка ошибок",True),("Логирование",True),("Документация",True),
-        ("Безопасность",True),("Мониторинг",True),("Реальная отправка",
-        last_real is not None),
+    True),# Уже проверили выше("Конфигурация",True),("Тестирование",True),
+    ("Обработка ошибок",True),("Логирование",True),("Документация",True),
+    ("Безопасность",True),("Мониторинг",True),("Реальная отправка",
+    last_real is not None),
     ]
 
     for check_name, passed in checks:
         if passed:
-            readiness_score += 1print(f"✅ {check_name}")
-        else:print(f"❌ {check_name}")
+        readiness_score += 1print(f"✅ {check_name}")
+    else:print(f"❌ {check_name}")
 
     readiness_percentage = (readiness_score / total_checks) * 100print(f"\n📊 ГОТОВНОСТЬ К ПРОДАКШЕНУ: {readiness_percentage:.0f}%")
 
@@ -168,33 +166,33 @@ print("\n" + "=" * 80)print("💼 ПРОЕКТ ГОТОВ К КОММЕРЧЕС�
 
     # Возвращаем структурированные данные для сохранения
     return {"timestamp": datetime.now().isoformat(),"total_deliveries": total_deliveries,
-        "successful_deliveries": successful_deliveries,"success_rate": success_rate,
-        "readiness_percentage": readiness_percentage,"verdict": verdict,"last_real_delivery": (
+    "successful_deliveries": successful_deliveries,"success_rate": success_rate,
+    "readiness_percentage": readiness_percentage,"verdict": verdict,"last_real_delivery": (
             {"email": last_real[0] if last_real else None,
                 "message_id": last_real[1] if last_real else None,
                 "status_code": last_real[4] if last_real else None,
                 "timestamp": last_real[3] if last_real else None,
-            }
+        }
             if last_real
-            else None
-        ),"provider_stats": [
-            {"provider": provider,"total": total,"successful": successful,
+        else None
+    ),"provider_stats": [
+        {"provider": provider,"total": total,"successful": successful,
                 "success_rate": (successful / total * 100) if total > 0 else 0,
-            }
+        }
             for provider, total, successful, failed in provider_stats
-        ],
+    ],
     }
 
 if __name__ == "__main__":
     try:
-        # Генерируем отчёт
-        report_data = generate_comprehensive_project_report()
+    # Генерируем отчёт
+    report_data = generate_comprehensive_project_report()
 
-        # Сохраняем в файлtimestamp = datetime.now().strftime("%Y%m%d_%H%M%S")report_file = f"comprehensive_project_report_{timestamp}.json"
+    # Сохраняем в файлtimestamp = datetime.now().strftime("%Y%m%d_%H%M%S")report_file = f"comprehensive_project_report_{timestamp}.json"
 with open(report_file, "w", encoding="utf-8") as f:
-            json.dump(report_data, f, ensure_ascii = False, indent = 2)
+        json.dump(report_data, f, ensure_ascii = False, indent = 2)
 print(f"\n💾 ОТЧЁТ СОХРАНЁН: {report_file}")print(f"📊 Данные доступны для анализа и архивирования")
 
     except Exception as e:print(f"\n💥 ОШИБКА ГЕНЕРАЦИИ ОТЧЁТА: {e}")
 
-        traceback.print_exc()
+    traceback.print_exc()

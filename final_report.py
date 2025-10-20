@@ -1,5 +1,5 @@
-    from pathlib import Path
-    import os
+from pathlib import Path
+import os
 import json
 import sys
 
@@ -13,8 +13,6 @@ from persistence.db import get_connection
 ИТОГОВЫЙ ОТЧЁТ О РЕАЛЬНОЙ ФУНКЦИОНАЛЬНОСТИ СИСТЕМЫ"""
 sys.path.append(".")
 
-
-
 def final_system_report():"""Финальный отчёт о реальной работе системы"""
     """Выполняет final system report."""
 print("🏆 ИТОГОВЫЙ ОТЧЁТ - СИСТЕМА РАБОТАЕТ С РЕАЛЬНЫМИ ДАННЫМИ")print("=" * 80)
@@ -23,37 +21,37 @@ print("📋 ОСНОВНЫЕ КОМПОНЕНТЫ:")print("   ✅ Система
     # Статистика БДprint(f"\n📊 СТАТИСТИКА БАЗЫ ДАННЫХ (реальные данные):")
 
     with get_connection() as conn:
-        cursor = conn.cursor()
+    cursor = conn.cursor()
 
-        # Общая статистикаcursor.execute("SELECT COUNT(*) FROM deliveries")
-        total_deliveries = cursor.fetchone()[0]
+    # Общая статистикаcursor.execute("SELECT COUNT(*) FROM deliveries")
+    total_deliveries = cursor.fetchone()[0]
 cursor.execute("SELECT COUNT(*) FROM deliveries WHERE success = 1")
-        successful = cursor.fetchone()[0]
+    successful = cursor.fetchone()[0]
 cursor.execute("SELECT COUNT(*) FROM deliveries WHERE success = 0")
-        failed = cursor.fetchone()[0]
+    failed = cursor.fetchone()[0]
 
         if total_deliveries > 0:
-            success_rate = (successful / total_deliveries) * 100
-        else:
-            success_rate = 0
+        success_rate = (successful / total_deliveries) * 100
+    else:
+        success_rate = 0
 print(f"   📧 Всего доставок: {total_deliveries}")print(f"   ✅ Успешных: {successful}")print(f"   ❌ Неудачных: {failed}")print(f"   📈 Успешность: {success_rate:.1f}%")
 
-        # Провайдерыcursor.execute("SELECT provider, COUNT(*) FROM deliveries GROUP BY provider")
-        providers = cursor.fetchall()
+    # Провайдерыcursor.execute("SELECT provider, COUNT(*) FROM deliveries GROUP BY provider")
+    providers = cursor.fetchall()
 print(f"\n🌐 ПРОВАЙДЕРЫ ОТПРАВКИ:")
         for provider, count in providers:print(f"   📮 {provider}: {count} писем")
 
-        # Использование по дням
-        cursor.execute("SELECT usage_date, used FROM daily_usage ORDER BY usage_date DESC LIMIT 5"
-        )
-        daily_usage = cursor.fetchall()
+    # Использование по дням
+    cursor.execute("SELECT usage_date, used FROM daily_usage ORDER BY usage_date DESC LIMIT 5"
+    )
+    daily_usage = cursor.fetchall()
 print(f"\n📅 ИСПОЛЬЗОВАНИЕ ПО ДНЯМ:")
         for date, count in daily_usage:print(f"   📊 {date}: {count} писем")
 
-        # Последние доставкиprint(f"\n📮 ПОСЛЕДНИЕ ДОСТАВКИ:")
-        cursor.execute("SELECT email,success,provider,""created_at FROM deliveries ORDER BY id DESC LIMIT 5"
-        )
-        recent = cursor.fetchall()
+    # Последние доставкиprint(f"\n📮 ПОСЛЕДНИЕ ДОСТАВКИ:")
+    cursor.execute("SELECT email,success,provider,""created_at FROM deliveries ORDER BY id DESC LIMIT 5"
+    )
+    recent = cursor.fetchall()
 
         for i,(email,success,provider,timestamp) in enumerate(recent, 1):status = "✅" if success else "❌"print(f"   {i}. {status} {email} | {provider} | {timestamp}")
 
@@ -61,15 +59,14 @@ print(f"\n📅 ИСПОЛЬЗОВАНИЕ ПО ДНЯМ:")
 
     # Файлы с реальными даннымиprint(f"\n📁 ФАЙЛЫ С РЕАЛЬНЫМИ ДАННЫМИ:")
 
-
     data_files = ["test_recipients_real.csv","""samples/test_template_real.html","""test_mailing.sqlite3",""]
 
     for file_path in data_files:
-        path = Path(file_path)
+    path = Path(file_path)
         if path.exists():
-            size = path.stat().st_size
-            print(f"   ✅ {file_path}: {size} байт")
-        else:print(f"   ❌ {file_path}: не найден")
+        size = path.stat().st_size
+        print(f"   ✅ {file_path}: {size} байт")
+    else:print(f"   ❌ {file_path}: не найден")
 
     # Возможности системыprint(f"\n🚀 РЕАЛЬНЫЕ ВОЗМОЖНОСТИ СИСТЕМЫ:")print(f"   📤 Отправка email через Resend API")print(f"   📊 Отслеживание статистики доставки")print(f"   🎯 Обработка событий webhook")print(f"   📋 Импорт получателей из CSV/JSON/Excel")print(f"   🎨 Рендеринг HTML шаблонов с Jinja2")print(f"   🔒 Управление отписками и блокировками")print(f"   📈 Лимиты и квоты отправки")print(f"   💾 Персистентное хранение данных")print(f"   🌐 Webhook сервер для мониторинга")
 

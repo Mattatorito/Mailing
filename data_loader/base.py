@@ -1,37 +1,31 @@
+#!/usr/bin/env python3
+
 from __future__ import annotations
-from typing import Iterable, Dict, Any, List
-
 from abc import ABC, abstractmethod
-
+from typing import List, Dict, Any, Iterator
 from mailing.models import Recipient
 
+
 class DataLoader(ABC):
-    """Класс DataLoader наследующий от ABC."""
+    """Базовый класс для загрузчиков данных."""
+    
     @abstractmethod
-    def load(self, path: str) -> List[Recipient]:
-        """Выполняет load.
-
-        Args:
-            path: Параметр для path
-
-        Returns:
-            List[Recipient]: Результат выполнения операции
-        """
-        ...
-
-    @staticmethod
-    def build_recipient(email: str, variables: Dict[str, Any]) -> Recipient:
-        """Выполняет build recipient.
-
-        Args:
-            email: Параметр для email
-            variables: Параметр для variables
-
-        Returns:
-            Recipient: Результат выполнения операции
-        """
-        # Извлекаем name из variables если есть
-        name = variables.get("name")
-        # Фильтруем только строковые ключи для **kwargs
-        other_vars = {k: v for k, v in variables.items() if k != "name" and isinstance(k, str)}
-        return Recipient(email=email, name=name, **other_vars)
+    def load(self, source: str) -> List[Recipient]:
+        """Загружает данные получателей из источника."""
+        pass
+    
+    @abstractmethod 
+    def validate_source(self, source: str) -> bool:
+        """Проверяет корректность источника данных."""
+        pass
+    
+    def _create_recipient(self, email: str, data: Dict[str, Any]) -> Recipient:
+        """Создает объект получателя из данных."""
+        name = data.get('name', data.get('Name', ''))
+        variables = {k: v for k, v in data.items() if k.lower() not in ['email', 'name']}
+        
+        return Recipient(
+            email=email,
+            name=name,
+            variables=variables
+        )
