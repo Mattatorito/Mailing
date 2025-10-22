@@ -1,33 +1,107 @@
-# Makefile for Email Marketing System
-# Автоматизация тестирования, форматирования и развертывания
+# Email Marketing Tool - Enhanced Makefile
+PYTHON := .venv/bin/python
+PIP := .venv/bin/pip
 
-.PHONY: help install test lint format security clean dev build deploy docs
+.PHONY: help install test test-cov lint format security audit clean dev build docs deploy
+.PHONY: enhanced-install enhanced-dev enhanced-prod ssl-certs backup-create metrics-check
+.PHONY: auth-setup cache-clear test-e2e
 
-# Переменные
-PYTHON = .venv/bin/python
-PIP = .venv/bin/pip
-PYTEST = .venv/bin/pytest
-PROJECT_NAME = src
-
-# По умолчанию показываем справку
 help:
-	@echo "🚀 Email Marketing System - Автоматизация задач"
-	@echo ""
-	@echo "Доступные команды:"
-	@echo "  install     - Установка зависимостей и настройка окружения"
-	@echo "  test        - Запуск всех тестов"
-	@echo "  test-fast   - Быстрые тесты (без медленных)"
-	@echo "  test-cov    - Тесты с покрытием кода"
+	@echo "� Professional Email Marketing Tool - Enhanced"
+	@echo "Available commands:"
+	@echo "  install     - Установка зависимостей"
+	@echo "  test        - Запуск тестов"
+	@echo "  test-cov    - Тесты с покрытием"
+	@echo "  test-e2e    - End-to-end тесты"
 	@echo "  lint        - Проверка качества кода"
 	@echo "  format      - Автоматическое форматирование кода"
 	@echo "  security    - Проверка безопасности"
 	@echo "  audit       - Полный аудит проекта"
 	@echo "  clean       - Очистка временных файлов"
-	@echo "  dev         - Запуск в режиме разработки"
-	@echo "  build       - Сборка проекта"
-	@echo "  docs        - Генерация документации"
-	@echo "  deploy      - Развертывание проекта"
 	@echo ""
+	@echo "🚀 Enhanced Features:"
+	@echo "  enhanced-install - Установка с новыми зависимостями"
+	@echo "  enhanced-dev     - Запуск в режиме разработки с улучшениями"
+	@echo "  enhanced-prod    - Production запуск с HTTPS"
+	@echo "  ssl-certs        - Генерация SSL сертификатов"
+	@echo "  backup-create    - Создание резервной копии"
+	@echo "  metrics-check    - Проверка метрик"
+	@echo "  auth-setup       - Настройка аутентификации"
+	@echo "  cache-clear      - Очистка кэша"
+	@echo ""
+
+# Enhanced installation with new dependencies
+enhanced-install: install
+	@echo "🔧 Installing enhanced dependencies..."
+	$(PIP) install passlib[bcrypt] python-jose[cryptography] PyJWT redis aiofiles
+	$(PIP) install prometheus-client psutil bleach pytest-httpx
+	@echo "✅ Enhanced dependencies installed"
+
+# SSL certificates generation
+ssl-certs:
+	@echo "🔒 Generating SSL certificates..."
+	./scripts/generate_ssl_certs.sh localhost 365
+	@echo "✅ SSL certificates generated"
+
+# Enhanced development mode
+enhanced-dev: enhanced-install ssl-certs
+	@echo "🚀 Starting enhanced development server..."
+	export ENVIRONMENT=development && \
+	export TEMPLATE_CACHE_ENABLED=true && \
+	export METRICS_ENABLED=true && \
+	export BACKUP_ENABLED=true && \
+	export HTTPS_ENABLED=false && \
+	$(PYTHON) src/enhanced_app.py
+
+# Enhanced production mode with HTTPS
+enhanced-prod: enhanced-install ssl-certs production
+	@echo "🔒 Starting enhanced production server with HTTPS..."
+	export ENVIRONMENT=production && \
+	export HTTPS_ENABLED=true && \
+	export FORCE_HTTPS=true && \
+	export TEMPLATE_CACHE_ENABLED=true && \
+	export METRICS_ENABLED=true && \
+	export BACKUP_ENABLED=true && \
+	$(PYTHON) src/enhanced_app.py
+
+# Authentication setup
+auth-setup:
+	@echo "🔑 Setting up authentication..."
+	@echo "Generating secure secret key..."
+	@$(PYTHON) -c "import secrets; print('AUTH_SECRET_KEY=' + secrets.token_urlsafe(32))" > .env.auth
+	@echo "✅ Authentication configured. Add .env.auth to your environment."
+
+# Create backup
+backup-create:
+	@echo "💾 Creating database backup..."
+	@$(PYTHON) -c "import asyncio; from src.persistence.backup import get_backup_manager; asyncio.run(get_backup_manager().create_backup('manual'))"
+	@echo "✅ Backup created"
+
+# Check metrics
+metrics-check:
+	@echo "📊 Checking metrics endpoint..."
+	@curl -s http://localhost:8080/metrics | head -20 || echo "Metrics server not running"
+
+# Clear cache
+cache-clear:
+	@echo "🧹 Clearing template cache..."
+	@$(PYTHON) -c "import asyncio; from src.templating.cached_engine import get_template_engine; asyncio.run(get_template_engine().clear_cache())"
+	@echo "✅ Cache cleared"
+
+# End-to-end tests
+test-e2e: enhanced-install
+	@echo "🧪 Running E2E tests..."
+	$(PYTHON) -m pytest tests/test_e2e_comprehensive.py -v --tb=short
+	@echo "✅ E2E tests completed"
+
+# Enhanced security check
+security-enhanced: security
+	@echo "🔒 Running enhanced security checks..."
+	@echo "Checking for hardcoded secrets..."
+	@grep -r "api_key\|password\|secret" src/ --include="*.py" | grep -v "getenv\|config" || echo "No hardcoded secrets found"
+	@echo "Checking SSL configuration..."
+	@$(PYTHON) -c "from src.security.https_config import load_https_config; print('HTTPS config:', load_https_config())"
+	@echo "✅ Enhanced security check completed"
 
 # Установка зависимостей
 install:
@@ -196,30 +270,8 @@ test-file:
 # Мониторинг в реальном времени
 watch-tests:
 	@echo "👀 Мониторинг тестов (требует установки watchdog)..."
-	@echo "pip install watchdog"
-	$(PYTHON) -c "
-import time
-import subprocess
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
-
-class TestRunner(FileSystemEventHandler):
-    def on_modified(self, event):
-        if event.src_path.endswith('.py'):
-            print(f'File changed: {event.src_path}')
-            subprocess.run(['make', 'test-fast'])
-
-observer = Observer()
-observer.schedule(TestRunner(), '.', recursive=True)
-observer.start()
-print('👀 Watching for changes...')
-try:
-    while True:
-        time.sleep(1)
-except KeyboardInterrupt:
-    observer.stop()
-observer.join()
-"
+	@echo "Установите: pip install watchdog"
+	@echo "Затем запустите: python scripts/watch_tests.py"
 
 # Проверка стиля коммитов
 check-commits:

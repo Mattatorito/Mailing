@@ -11,15 +11,26 @@ services:
       target: production
     ports:
       - "8080:8080"
+      - "8443:8443"  # HTTPS порт
     environment:
       - ENVIRONMENT=production
       - RESEND_API_KEY=${RESEND_API_KEY}
       - WEBHOOK_SECRET=${WEBHOOK_SECRET}
       - SQLITE_DB_PATH=/app/data/mailing.sqlite3
+      - HTTPS_ENABLED=${HTTPS_ENABLED:-false}
+      - SSL_CERT_FILE=/app/certs/cert.pem
+      - SSL_KEY_FILE=/app/certs/key.pem
+      - FORCE_HTTPS=${FORCE_HTTPS:-false}
+      - TEMPLATE_CACHE_ENABLED=true
+      - METRICS_ENABLED=true
+      - BACKUP_ENABLED=true
+      - AUTH_SECRET_KEY=${AUTH_SECRET_KEY}
     volumes:
       - ./data:/app/data
       - ./logs:/app/logs
       - ./samples:/app/samples
+      - ./certs:/app/certs:ro  # SSL сертификаты
+      - ./backups:/app/backups
     restart: unless-stopped
     deploy:
       resources:
