@@ -1,1 +1,0 @@
-# CustomTkinter based GUI package

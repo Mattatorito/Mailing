@@ -1,0 +1,105 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+logs/
+*.log
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+test_*.csv
+*.json
+*.md
+!requirements.txt
+!pyproject.toml
+!README.md
+
+# Development files
+*.orig
+*.rej
+.pre-commit-config.yaml
+bandit-report.json
+
+# Documentation
+docs/
+*.rst
+
+# Temp files
+*.tmp
+*.bak
+
+# Large files
+*.zip
+*.tar.gz
+*.rar
+
+# Development tools
+.mypy_cache/
+.dmypy.json
+dmypy.json

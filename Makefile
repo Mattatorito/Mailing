@@ -7,7 +7,7 @@
 PYTHON = .venv/bin/python
 PIP = .venv/bin/pip
 PYTEST = .venv/bin/pytest
-PROJECT_NAME = mailing
+PROJECT_NAME = src
 
 # По умолчанию показываем справку
 help:
@@ -53,8 +53,8 @@ test-fast:
 # Тесты с покрытием
 test-cov:
 	@echo "📊 Тесты с анализом покрытия..."
-	$(PYTEST) tests/ --cov=mailing --cov=templating --cov=persistence --cov=resend --cov=validation --cov=stats --cov-report=html --cov-report=term-missing
-	@echo "✅ Отчет о покрытии создан в htmlcov/"
+	$(PYTEST) tests/ --cov=src --cov-report=html:reports/htmlcov --cov-report=term-missing
+	@echo "✅ Отчет о покрытии создан в reports/htmlcov/"
 
 # Проверка качества кода
 lint:
@@ -93,12 +93,12 @@ audit:
 # Очистка
 clean:
 	@echo "🧹 Очистка временных файлов..."
-	find . -type d -name "__pycache__" -delete
-	find . -type f -name "*.pyc" -delete
-	find . -type f -name "*.pyo" -delete
-	find . -type d -name "*.egg-info" -exec rm -rf {} +
+	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
+	find . -type f -name "*.pyc" -delete 2>/dev/null || true
+	find . -type f -name "*.pyo" -delete 2>/dev/null || true
+	find . -type d -name "*.egg-info" -exec rm -rf {} + 2>/dev/null || true
 	rm -rf .pytest_cache/
-	rm -rf htmlcov/
+	rm -rf reports/htmlcov/
 	rm -rf .coverage
 	rm -rf .mypy_cache/
 	rm -rf build/

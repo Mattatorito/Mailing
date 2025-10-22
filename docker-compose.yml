@@ -1,0 +1,188 @@
+# Docker Compose для Professional Email Marketing Tool
+# Поддерживает development, testing и production окружения
+
+version: '3.8'
+
+services:
+  # Основное приложение (webhook server)
+  email-marketing-app:
+    build:
+      context: .
+      target: production
+    ports:
+      - "8080:8080"
+    environment:
+      - ENVIRONMENT=production
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - WEBHOOK_SECRET=${WEBHOOK_SECRET}
+      - SQLITE_DB_PATH=/app/data/mailing.sqlite3
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./samples:/app/samples
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - email-network
+
+  # Development environment
+  email-marketing-dev:
+    build:
+      context: .
+      target: development
+    ports:
+      - "8080:8080"
+      - "5000:5000"  # Дополнительный порт для dev сервера
+    environment:
+      - ENVIRONMENT=development
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - WEBHOOK_SECRET=${WEBHOOK_SECRET}
+      - SQLITE_DB_PATH=/app/data/mailing.sqlite3
+    volumes:
+      - .:/app  # Монтируем весь код для разработки
+      - ./data:/app/data
+      - ./logs:/app/logs
+    command: ["python", "-m", "mailing.webhook_server"]
+    networks:
+      - email-network
+    profiles:
+      - dev
+
+  # CLI runner
+  email-marketing-cli:
+    build:
+      context: .
+      target: cli
+    environment:
+      - ENVIRONMENT=production
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - SQLITE_DB_PATH=/app/data/mailing.sqlite3
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./samples:/app/samples
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    networks:
+      - email-network
+    profiles:
+      - cli
+
+  # Testing environment
+  email-marketing-test:
+    build:
+      context: .
+      target: testing
+    volumes:
+      - .:/app
+      - ./htmlcov:/app/htmlcov
+    command: ["python", "-m", "pytest", "--cov=mailing", "--cov-report=html", "--cov-report=term-missing"]
+    networks:
+      - email-network
+    profiles:
+      - test
+
+  # Nginx reverse proxy (для production)
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - email-marketing-app
+    restart: unless-stopped
+    networks:
+      - email-network
+    profiles:
+      - production
+
+  # Мониторинг с Prometheus (опционально)
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    networks:
+      - email-network
+    profiles:
+      - monitoring
+
+  # Grafana для визуализации метрик
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+    volumes:
+      - grafana-data:/var/lib/grafana
+    networks:
+      - email-network
+    profiles:
+      - monitoring
+
+networks:
+  email-network:
+    driver: bridge
+
+volumes:
+  grafana-data:
+
+# Примеры использования:
+#
+# Development:
+# docker-compose --profile dev up email-marketing-dev
+#
+# Production:
+# docker-compose --profile production up -d
+#
+# Testing:
+# docker-compose --profile test up email-marketing-test
+#
+# CLI Examples:
+# Отправка email кампании:
+# docker-compose --profile cli run --rm email-marketing-cli send --recipients data/recipients.csv --template samples/template.html --subject "Newsletter" --dry-run
+#
+# Проверка статуса:
+# docker-compose --profile cli run --rm email-marketing-cli status
+#
+# Валидация email адресов:
+# docker-compose --profile cli run --rm email-marketing-cli validate --input data/emails.txt --output data/validated.csv
+#
+# Просмотр статистики:
+# docker-compose --profile cli run --rm email-marketing-cli stats --format json
+#
+# Настройка конфигурации:
+# docker-compose --profile cli run --rm email-marketing-cli config --set resend_api_key=YOUR_KEY
+#
+# Мониторинг:
+# docker-compose --profile monitoring up -d prometheus grafana
+#
+# Все вместе (без мониторинга):
+# docker-compose up -d email-marketing-app
+#
+# С nginx:
+# docker-compose --profile production up -d email-marketing-app nginx

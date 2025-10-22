@@ -1,0 +1,94 @@
+name: Code Quality & Coverage
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+    types: [ opened, synchronize, reopened ]
+  push:
+    branches: [ main, develop ]
+
+env:
+  PYTHON_VERSION: '3.11'
+  COVERAGE_THRESHOLD: 90
+
+jobs:
+  coverage-analysis:
+    name: Coverage Analysis
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install coverage pytest-cov diff-cover
+        
+    - name: Run tests with coverage
+      run: |
+        pytest --cov=. \
+               --cov-report=xml:coverage.xml \
+               --cov-report=json:coverage.json \
+               --cov-report=html:htmlcov \
+               --cov-report=term-missing
+        
+    - name: Generate coverage badge
+      run: python .github/scripts/generate_coverage_badge.py
+        
+    - name: Coverage diff analysis
+      if: github.event_name == 'pull_request'
+      run: |
+        git fetch origin main:main
+        diff-cover coverage.xml --compare-branch=main --fail-under=90
+        
+    - name: Coverage threshold check
+      run: python .github/scripts/check_coverage_threshold.py
+        
+    - name: Upload coverage reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-reports
+        path: |
+          coverage.xml
+          coverage.json
+          htmlcov/
+          
+    - name: Comment PR with coverage
+      if: github.event_name == 'pull_request'
+      run: |
+        node .github/scripts/generate_coverage_comment.js
+        
+    - name: Post coverage comment
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const comment = fs.readFileSync('coverage-comment.txt', 'utf8');
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: comment
+          });

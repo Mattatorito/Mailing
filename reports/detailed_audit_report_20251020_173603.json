@@ -1,0 +1,6121 @@
+{
+  "timestamp": "2025-10-20T17:36:03.543770",
+  "summary": {
+    "critical": 38,
+    "major": 9,
+    "minor": 823,
+    "suggestions": 0,
+    "total": 870,
+    "grade": "D",
+    "verdict": "ТРЕБУЕТ СЕРЬЕЗНОЙ ДОРАБОТКИ"
+  },
+  "issues": [
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: f-string: unmatched '(' (<unknown>, line 57)",
+      "file": "test_full_cycle.py",
+      "timestamp": "2025-10-20T17:36:02.075368"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 100)",
+      "file": "final_report.py",
+      "timestamp": "2025-10-20T17:36:02.118301"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 30)",
+      "file": "deep_analysis.py",
+      "timestamp": "2025-10-20T17:36:02.122961"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 50)",
+      "file": "tests/test_template_persistence.py",
+      "timestamp": "2025-10-20T17:36:02.140497"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 23)",
+      "file": "tests/test_remaining_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.172349"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 46)",
+      "file": "persistence/repository.py",
+      "timestamp": "2025-10-20T17:36:02.175653"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 53)",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.175973"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: invalid syntax (<unknown>, line 20)",
+      "file": "gui/animation_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177367"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 22)",
+      "file": "gui/mailer_service.py",
+      "timestamp": "2025-10-20T17:36:02.178288"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 4)",
+      "file": "gui/base_window.py",
+      "timestamp": "2025-10-20T17:36:02.178460"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 13)",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178624"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: invalid syntax (<unknown>, line 24)",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178809"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 19)",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179036"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 23)",
+      "file": "gui/themed.py",
+      "timestamp": "2025-10-20T17:36:02.179233"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: invalid syntax (<unknown>, line 14)",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180488"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 3)",
+      "file": "gui/error_handling.py",
+      "timestamp": "2025-10-20T17:36:02.180621"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: invalid syntax (<unknown>, line 20)",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180766"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 49)",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181075"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 28)",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181357"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 13)",
+      "file": "gui/vibrancy.py",
+      "timestamp": "2025-10-20T17:36:02.181522"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 21)",
+      "file": "gui/settings_panel.py",
+      "timestamp": "2025-10-20T17:36:02.181623"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 108)",
+      "file": "gui/enhanced_main_window.py",
+      "timestamp": "2025-10-20T17:36:02.182342"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 19)",
+      "file": "gui/log_handler.py",
+      "timestamp": "2025-10-20T17:36:02.183310"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: invalid syntax (<unknown>, line 17)",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184242"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 8)",
+      "file": "gui/i18n.py",
+      "timestamp": "2025-10-20T17:36:02.184420"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 16)",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184553"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: invalid syntax (<unknown>, line 24)",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184723"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 11)",
+      "file": "data_loader/excel_loader.py",
+      "timestamp": "2025-10-20T17:36:02.184881"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 11)",
+      "file": "data_loader/csv_loader.py",
+      "timestamp": "2025-10-20T17:36:02.184994"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 3)",
+      "file": "data_loader/streaming.py",
+      "timestamp": "2025-10-20T17:36:02.185075"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 11)",
+      "file": "data_loader/json_loader.py",
+      "timestamp": "2025-10-20T17:36:02.185178"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 19)",
+      "file": "data_loader/base.py",
+      "timestamp": "2025-10-20T17:36:02.185252"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 17)",
+      "file": "stats/aggregator.py",
+      "timestamp": "2025-10-20T17:36:02.190104"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 6)",
+      "file": "resend/client.py",
+      "timestamp": "2025-10-20T17:36:02.190583"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: expected an indented block (<unknown>, line 32)",
+      "file": "mailing/config.py",
+      "timestamp": "2025-10-20T17:36:02.193182"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 19)",
+      "file": "mailing/logging_config.py",
+      "timestamp": "2025-10-20T17:36:02.193301"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 24)",
+      "file": "mailing/cli.py",
+      "timestamp": "2025-10-20T17:36:02.193990"
+    },
+    {
+      "level": "critical",
+      "category": "syntax",
+      "message": "Синтаксическая ошибка: EOL while scanning string literal (<unknown>, line 11)",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195637"
+    }
+  ],
+  "warnings": [
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 22",
+      "file": "test_full_cycle.py",
+      "timestamp": "2025-10-20T17:36:02.075402"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 244",
+      "file": "test_full_cycle.py",
+      "timestamp": "2025-10-20T17:36:02.075453"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 12",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078117"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 18",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078121"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 20",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078122"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 28",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078125"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 35",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078127"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 42",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078129"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 48",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078131"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 54",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078133"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 56",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078134"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 61",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078136"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 74",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078139"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 78",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078140"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 81",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078142"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 84",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078143"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 87",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078145"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 92",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078147"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 95",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078148"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 99",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078150"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 102",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078151"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 111",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078154"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 117",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.078157"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 12",
+      "file": "fix_whitespace.py",
+      "timestamp": "2025-10-20T17:36:02.079724"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 42",
+      "file": "fix_whitespace.py",
+      "timestamp": "2025-10-20T17:36:02.079732"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 63",
+      "file": "fix_whitespace.py",
+      "timestamp": "2025-10-20T17:36:02.079737"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 111",
+      "file": "fix_whitespace.py",
+      "timestamp": "2025-10-20T17:36:02.079747"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 152",
+      "file": "fix_whitespace.py",
+      "timestamp": "2025-10-20T17:36:02.079757"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция create_release: 87 строк",
+      "file": "create_release.py",
+      "timestamp": "2025-10-20T17:36:02.080429"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 13",
+      "file": "create_release.py",
+      "timestamp": "2025-10-20T17:36:02.080836"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 103",
+      "file": "create_release.py",
+      "timestamp": "2025-10-20T17:36:02.080860"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция index: 84 строк",
+      "file": "minimal_web_gui.py",
+      "timestamp": "2025-10-20T17:36:02.081346"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция test: 70 строк",
+      "file": "minimal_web_gui.py",
+      "timestamp": "2025-10-20T17:36:02.081379"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция main без docstring",
+      "file": "minimal_web_gui.py",
+      "timestamp": "2025-10-20T17:36:02.081442"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 13",
+      "file": "minimal_web_gui.py",
+      "timestamp": "2025-10-20T17:36:02.081574"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Длинная строка (124 символов) в строке 32",
+      "file": "minimal_web_gui.py",
+      "timestamp": "2025-10-20T17:36:02.081579"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 101",
+      "file": "minimal_web_gui.py",
+      "timestamp": "2025-10-20T17:36:02.081593"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 175",
+      "file": "minimal_web_gui.py",
+      "timestamp": "2025-10-20T17:36:02.081607"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 186",
+      "file": "minimal_web_gui.py",
+      "timestamp": "2025-10-20T17:36:02.081610"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция main: 72 строк",
+      "file": "run_gui.py",
+      "timestamp": "2025-10-20T17:36:02.082229"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Сложная функция main: 14 ветвлений",
+      "file": "run_gui.py",
+      "timestamp": "2025-10-20T17:36:02.082397"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 15",
+      "file": "run_gui.py",
+      "timestamp": "2025-10-20T17:36:02.082639"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 31",
+      "file": "run_gui.py",
+      "timestamp": "2025-10-20T17:36:02.082643"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 44",
+      "file": "run_gui.py",
+      "timestamp": "2025-10-20T17:36:02.082647"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 57",
+      "file": "run_gui.py",
+      "timestamp": "2025-10-20T17:36:02.082650"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 70",
+      "file": "run_gui.py",
+      "timestamp": "2025-10-20T17:36:02.082653"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 145",
+      "file": "run_gui.py",
+      "timestamp": "2025-10-20T17:36:02.082668"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция show_system_status: 105 строк",
+      "file": "show_real_status.py",
+      "timestamp": "2025-10-20T17:36:02.083451"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 16",
+      "file": "show_real_status.py",
+      "timestamp": "2025-10-20T17:36:02.084177"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 124",
+      "file": "show_real_status.py",
+      "timestamp": "2025-10-20T17:36:02.084197"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 162",
+      "file": "show_real_status.py",
+      "timestamp": "2025-10-20T17:36:02.084205"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "show_real_status.py",
+      "timestamp": "2025-10-20T17:36:02.084603"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 22",
+      "file": "simple_real_test.py",
+      "timestamp": "2025-10-20T17:36:02.085255"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 130",
+      "file": "simple_real_test.py",
+      "timestamp": "2025-10-20T17:36:02.085276"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "simple_real_test.py",
+      "timestamp": "2025-10-20T17:36:02.085569"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 15",
+      "file": "real_time_monitor.py",
+      "timestamp": "2025-10-20T17:36:02.086231"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 157",
+      "file": "real_time_monitor.py",
+      "timestamp": "2025-10-20T17:36:02.086257"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "real_time_monitor.py",
+      "timestamp": "2025-10-20T17:36:02.086560"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция generate_perfect_performance_report: 311 строк",
+      "file": "perfect_performance_report.py",
+      "timestamp": "2025-10-20T17:36:02.087529"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Сложная функция generate_perfect_performance_report: 13 ветвлений",
+      "file": "perfect_performance_report.py",
+      "timestamp": "2025-10-20T17:36:02.088129"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 15",
+      "file": "perfect_performance_report.py",
+      "timestamp": "2025-10-20T17:36:02.088766"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 329",
+      "file": "perfect_performance_report.py",
+      "timestamp": "2025-10-20T17:36:02.088824"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "perfect_performance_report.py",
+      "timestamp": "2025-10-20T17:36:02.089575"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 24",
+      "file": "real_email_test.py",
+      "timestamp": "2025-10-20T17:36:02.090981"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 278",
+      "file": "real_email_test.py",
+      "timestamp": "2025-10-20T17:36:02.091032"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "real_email_test.py",
+      "timestamp": "2025-10-20T17:36:02.091688"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция comprehensive_project_audit: 571 строк",
+      "file": "comprehensive_audit.py",
+      "timestamp": "2025-10-20T17:36:02.093431"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Сложная функция comprehensive_project_audit: 79 ветвлений",
+      "file": "comprehensive_audit.py",
+      "timestamp": "2025-10-20T17:36:02.094743"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 18",
+      "file": "comprehensive_audit.py",
+      "timestamp": "2025-10-20T17:36:02.096003"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 592",
+      "file": "comprehensive_audit.py",
+      "timestamp": "2025-10-20T17:36:02.096111"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "comprehensive_audit.py",
+      "timestamp": "2025-10-20T17:36:02.097507"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция add_docstrings_to_file: 56 строк",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.098403"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 11",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099250"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 14",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099251"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 18",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099253"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 29",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099256"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 41",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099259"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 51",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099261"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 58",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099263"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 68",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099266"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 75",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099268"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 85",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099270"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 87",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099271"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 94",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099273"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 98",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099275"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 102",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099277"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 107",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099278"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 114",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099280"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 117",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099282"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 123",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099283"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 127",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099285"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 130",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099286"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 133",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099287"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 136",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099289"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 139",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099290"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 142",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099291"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 145",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099293"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 148",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099294"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 153",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099296"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 156",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099297"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 161",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099299"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 165",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099300"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 169",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099301"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 171",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099303"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 176",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099304"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 180",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099306"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 183",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099307"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 186",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099308"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 188",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099309"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 191",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099311"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 196",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099312"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 198",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099314"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 202",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099315"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 205",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099316"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 208",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099318"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 214",
+      "file": "add_docstrings.py",
+      "timestamp": "2025-10-20T17:36:02.099320"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "TODO/FIXME в строках [148, 149, 153, 155, 157, 162, 266, 267]",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.100110"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция audit_project_structure: 66 строк",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.102971"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция audit_code_quality: 165 строк",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.103123"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Сложная функция audit_code_quality: 16 ветвлений",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.103517"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция _check_code_style: 53 строк",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.103521"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция audit_security_detailed: 108 строк",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.103640"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Сложная функция audit_security_detailed: 15 ветвлений",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.103859"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Сложная функция _check_unused_imports: 12 ветвлений",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.104099"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция audit_testing_detailed: 113 строк",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.104102"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Сложная функция audit_testing_detailed: 18 ветвлений",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.104375"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция audit_database: 83 строк",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.104605"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция audit_performance: 59 строк",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.104826"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Сложная функция audit_performance: 12 ветвлений",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.105012"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция generate_report: 115 строк",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.105017"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Сложная функция generate_report: 19 ветвлений",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.105396"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 21",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.107729"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 199",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.107766"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 217",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.107771"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 384",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.107805"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 490",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.107828"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 612",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.107853"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 818",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.107896"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 889",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.107912"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 1037",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.107943"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 1060",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.107949"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "detailed_audit.py",
+      "timestamp": "2025-10-20T17:36:02.110716"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция test_real_sending: 90 строк",
+      "file": "test_real_sending.py",
+      "timestamp": "2025-10-20T17:36:02.111213"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 12",
+      "file": "test_real_sending.py",
+      "timestamp": "2025-10-20T17:36:02.111526"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 105",
+      "file": "test_real_sending.py",
+      "timestamp": "2025-10-20T17:36:02.111545"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "test_real_sending.py",
+      "timestamp": "2025-10-20T17:36:02.111706"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 23",
+      "file": "optimize_performance.py",
+      "timestamp": "2025-10-20T17:36:02.112931"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 239",
+      "file": "optimize_performance.py",
+      "timestamp": "2025-10-20T17:36:02.112975"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "optimize_performance.py",
+      "timestamp": "2025-10-20T17:36:02.113561"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 23",
+      "file": "final_real_test.py",
+      "timestamp": "2025-10-20T17:36:02.115031"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 267",
+      "file": "final_real_test.py",
+      "timestamp": "2025-10-20T17:36:02.115076"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "final_real_test.py",
+      "timestamp": "2025-10-20T17:36:02.115736"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 11",
+      "file": "monitor_real.py",
+      "timestamp": "2025-10-20T17:36:02.116423"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 40",
+      "file": "monitor_real.py",
+      "timestamp": "2025-10-20T17:36:02.116430"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 49",
+      "file": "monitor_real.py",
+      "timestamp": "2025-10-20T17:36:02.116432"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 85",
+      "file": "monitor_real.py",
+      "timestamp": "2025-10-20T17:36:02.116440"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 22",
+      "file": "onboarding_test.py",
+      "timestamp": "2025-10-20T17:36:02.117574"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 183",
+      "file": "onboarding_test.py",
+      "timestamp": "2025-10-20T17:36:02.117604"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "onboarding_test.py",
+      "timestamp": "2025-10-20T17:36:02.118056"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 14",
+      "file": "final_report.py",
+      "timestamp": "2025-10-20T17:36:02.118313"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 155",
+      "file": "final_report.py",
+      "timestamp": "2025-10-20T17:36:02.118340"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция fix_indentation_errors: 69 строк",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.118807"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 11",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119297"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 17",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119300"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 21",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119302"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 24",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119303"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 28",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119305"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 31",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119306"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 36",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119308"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 42",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119310"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 44",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119311"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 45",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119312"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 53",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119315"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 69",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119319"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 72",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119320"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 78",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119322"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 83",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119324"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 87",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119326"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 91",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119327"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 105",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119331"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 108",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119332"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 110",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119333"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 119",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119336"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 124",
+      "file": "fix_syntax_quick.py",
+      "timestamp": "2025-10-20T17:36:02.119338"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция generate_comprehensive_project_report: 319 строк",
+      "file": "comprehensive_project_report.py",
+      "timestamp": "2025-10-20T17:36:02.120474"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Сложная функция generate_comprehensive_project_report: 13 ветвлений",
+      "file": "comprehensive_project_report.py",
+      "timestamp": "2025-10-20T17:36:02.121184"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 15",
+      "file": "comprehensive_project_report.py",
+      "timestamp": "2025-10-20T17:36:02.121894"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 337",
+      "file": "comprehensive_project_report.py",
+      "timestamp": "2025-10-20T17:36:02.121957"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "comprehensive_project_report.py",
+      "timestamp": "2025-10-20T17:36:02.122755"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 18",
+      "file": "deep_analysis.py",
+      "timestamp": "2025-10-20T17:36:02.122988"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Длинная строка (157 символов) в строке 120",
+      "file": "deep_analysis.py",
+      "timestamp": "2025-10-20T17:36:02.123010"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 429",
+      "file": "deep_analysis.py",
+      "timestamp": "2025-10-20T17:36:02.123069"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция final_quality_check: 335 строк",
+      "file": "final_quality_check.py",
+      "timestamp": "2025-10-20T17:36:02.124191"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Сложная функция final_quality_check: 41 ветвлений",
+      "file": "final_quality_check.py",
+      "timestamp": "2025-10-20T17:36:02.125012"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 18",
+      "file": "final_quality_check.py",
+      "timestamp": "2025-10-20T17:36:02.125794"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Длинная строка (249 символов) в строке 256",
+      "file": "final_quality_check.py",
+      "timestamp": "2025-10-20T17:36:02.125842"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Длинная строка (216 символов) в строке 261",
+      "file": "final_quality_check.py",
+      "timestamp": "2025-10-20T17:36:02.125844"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Длинная строка (222 символов) в строке 266",
+      "file": "final_quality_check.py",
+      "timestamp": "2025-10-20T17:36:02.125846"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 356",
+      "file": "final_quality_check.py",
+      "timestamp": "2025-10-20T17:36:02.125866"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "final_quality_check.py",
+      "timestamp": "2025-10-20T17:36:02.126697"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция comprehensive_system_report: 460 строк",
+      "file": "comprehensive_report.py",
+      "timestamp": "2025-10-20T17:36:02.128223"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Сложная функция comprehensive_system_report: 31 ветвлений",
+      "file": "comprehensive_report.py",
+      "timestamp": "2025-10-20T17:36:02.129303"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 31",
+      "file": "comprehensive_report.py",
+      "timestamp": "2025-10-20T17:36:02.130350"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 494",
+      "file": "comprehensive_report.py",
+      "timestamp": "2025-10-20T17:36:02.130442"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "comprehensive_report.py",
+      "timestamp": "2025-10-20T17:36:02.132590"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 24",
+      "file": "enhanced_gui_app.py",
+      "timestamp": "2025-10-20T17:36:02.133000"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 65",
+      "file": "enhanced_gui_app.py",
+      "timestamp": "2025-10-20T17:36:02.133010"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция require_rate_limit: 55 строк",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.134077"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция wrapper без docstring",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.134678"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция decorator без docstring",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.134815"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция sync_wrapper без docstring",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.134974"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 25",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.135600"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 31",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.135602"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 37",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.135604"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 43",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.135606"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 49",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.135608"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 208",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.135637"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 284",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.135652"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 358",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.135667"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 376",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.135671"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 409",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.135678"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 480",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.135693"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 485",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.135694"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 543",
+      "file": "security/__init__.py",
+      "timestamp": "2025-10-20T17:36:02.135706"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Класс Resp без docstring",
+      "file": "tests/test_resend_client.py",
+      "timestamp": "2025-10-20T17:36:02.136718"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция is_success без docstring",
+      "file": "tests/test_resend_client.py",
+      "timestamp": "2025-10-20T17:36:02.136752"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция json без docstring",
+      "file": "tests/test_resend_client.py",
+      "timestamp": "2025-10-20T17:36:02.136763"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 7",
+      "file": "tests/test_resend_client.py",
+      "timestamp": "2025-10-20T17:36:02.136843"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 8",
+      "file": "tests/test_campaign_dryrun.py",
+      "timestamp": "2025-10-20T17:36:02.137067"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 16",
+      "file": "tests/test_preflight_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.139575"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 306",
+      "file": "tests/test_preflight_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.139626"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 11",
+      "file": "tests/test_template_persistence.py",
+      "timestamp": "2025-10-20T17:36:02.140503"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 22",
+      "file": "tests/test_template_persistence.py",
+      "timestamp": "2025-10-20T17:36:02.140506"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция test_daily_quota_basic без docstring",
+      "file": "tests/test_core.py",
+      "timestamp": "2025-10-20T17:36:02.140774"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция test_compute_delay_bounds без docstring",
+      "file": "tests/test_core.py",
+      "timestamp": "2025-10-20T17:36:02.140834"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Класс Transient без docstring",
+      "file": "tests/test_core.py",
+      "timestamp": "2025-10-20T17:36:02.140896"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Класс E без docstring",
+      "file": "tests/test_core.py",
+      "timestamp": "2025-10-20T17:36:02.140903"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 9",
+      "file": "tests/test_core.py",
+      "timestamp": "2025-10-20T17:36:02.141042"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 32",
+      "file": "tests/test_core.py",
+      "timestamp": "2025-10-20T17:36:02.141047"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 52",
+      "file": "tests/test_core.py",
+      "timestamp": "2025-10-20T17:36:02.141052"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Класс TestClass без docstring",
+      "file": "tests/test_system_complete.py",
+      "timestamp": "2025-10-20T17:36:02.143303"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция failing_method без docstring",
+      "file": "tests/test_system_complete.py",
+      "timestamp": "2025-10-20T17:36:02.143306"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция failing_file_op без docstring",
+      "file": "tests/test_system_complete.py",
+      "timestamp": "2025-10-20T17:36:02.143318"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 28",
+      "file": "tests/test_system_complete.py",
+      "timestamp": "2025-10-20T17:36:02.144185"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 329",
+      "file": "tests/test_system_complete.py",
+      "timestamp": "2025-10-20T17:36:02.144245"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 404",
+      "file": "tests/test_system_complete.py",
+      "timestamp": "2025-10-20T17:36:02.144262"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 452",
+      "file": "tests/test_system_complete.py",
+      "timestamp": "2025-10-20T17:36:02.144273"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 523",
+      "file": "tests/test_system_complete.py",
+      "timestamp": "2025-10-20T17:36:02.144288"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 19",
+      "file": "tests/test_cli_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.148300"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 95",
+      "file": "tests/test_cli_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.148316"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 167",
+      "file": "tests/test_cli_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.148330"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 191",
+      "file": "tests/test_cli_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.148335"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 288",
+      "file": "tests/test_cli_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.148352"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 510",
+      "file": "tests/test_cli_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.148391"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 526",
+      "file": "tests/test_cli_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.148395"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 20",
+      "file": "tests/test_additional.py",
+      "timestamp": "2025-10-20T17:36:02.150802"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 54",
+      "file": "tests/test_additional.py",
+      "timestamp": "2025-10-20T17:36:02.150810"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 80",
+      "file": "tests/test_additional.py",
+      "timestamp": "2025-10-20T17:36:02.150816"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 95",
+      "file": "tests/test_additional.py",
+      "timestamp": "2025-10-20T17:36:02.150819"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 123",
+      "file": "tests/test_additional.py",
+      "timestamp": "2025-10-20T17:36:02.150825"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 154",
+      "file": "tests/test_additional.py",
+      "timestamp": "2025-10-20T17:36:02.150831"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 16",
+      "file": "tests/test_improved_code.py",
+      "timestamp": "2025-10-20T17:36:02.152116"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 90",
+      "file": "tests/test_improved_code.py",
+      "timestamp": "2025-10-20T17:36:02.152130"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 128",
+      "file": "tests/test_improved_code.py",
+      "timestamp": "2025-10-20T17:36:02.152138"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция test_database_performance: 63 строк",
+      "file": "tests/test_performance.py",
+      "timestamp": "2025-10-20T17:36:02.153793"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция test_quota_system_stress: 64 строк",
+      "file": "tests/test_performance.py",
+      "timestamp": "2025-10-20T17:36:02.153951"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция test_template_rendering_stress: 71 строк",
+      "file": "tests/test_performance.py",
+      "timestamp": "2025-10-20T17:36:02.154084"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция test_disk_space_handling: 53 строк",
+      "file": "tests/test_performance.py",
+      "timestamp": "2025-10-20T17:36:02.154265"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция register_sends без docstring",
+      "file": "tests/test_performance.py",
+      "timestamp": "2025-10-20T17:36:02.154481"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 21",
+      "file": "tests/test_performance.py",
+      "timestamp": "2025-10-20T17:36:02.155266"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 231",
+      "file": "tests/test_performance.py",
+      "timestamp": "2025-10-20T17:36:02.155309"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 409",
+      "file": "tests/test_performance.py",
+      "timestamp": "2025-10-20T17:36:02.155347"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 531",
+      "file": "tests/test_performance.py",
+      "timestamp": "2025-10-20T17:36:02.155373"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция test_delivery_repository_isolated: 54 строк",
+      "file": "tests/test_final.py",
+      "timestamp": "2025-10-20T17:36:02.157571"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 12",
+      "file": "tests/test_final.py",
+      "timestamp": "2025-10-20T17:36:02.158312"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 169",
+      "file": "tests/test_final.py",
+      "timestamp": "2025-10-20T17:36:02.158343"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 280",
+      "file": "tests/test_final.py",
+      "timestamp": "2025-10-20T17:36:02.158366"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 327",
+      "file": "tests/test_final.py",
+      "timestamp": "2025-10-20T17:36:02.158376"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 364",
+      "file": "tests/test_final.py",
+      "timestamp": "2025-10-20T17:36:02.158384"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция setup_method без docstring",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.159904"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 15",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161370"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 149",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161396"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 153",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161398"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 180",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161404"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 184",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161406"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 233",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161415"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 238",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161417"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 252",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161421"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 256",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161423"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 269",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161426"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 283",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161430"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 287",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161432"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 323",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161440"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 327",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.161441"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Импорты после кода",
+      "file": "tests/test_additional_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.162136"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 10",
+      "file": "tests/test_quick.py",
+      "timestamp": "2025-10-20T17:36:02.162631"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 32",
+      "file": "tests/test_quick.py",
+      "timestamp": "2025-10-20T17:36:02.162637"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 55",
+      "file": "tests/test_quick.py",
+      "timestamp": "2025-10-20T17:36:02.162641"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 66",
+      "file": "tests/test_quick.py",
+      "timestamp": "2025-10-20T17:36:02.162644"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция test_delivery_repository: 54 строк",
+      "file": "tests/test_interfaces.py",
+      "timestamp": "2025-10-20T17:36:02.164009"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 14",
+      "file": "tests/test_interfaces.py",
+      "timestamp": "2025-10-20T17:36:02.164718"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 119",
+      "file": "tests/test_interfaces.py",
+      "timestamp": "2025-10-20T17:36:02.164738"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 161",
+      "file": "tests/test_interfaces.py",
+      "timestamp": "2025-10-20T17:36:02.164746"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 216",
+      "file": "tests/test_interfaces.py",
+      "timestamp": "2025-10-20T17:36:02.164757"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 300",
+      "file": "tests/test_interfaces.py",
+      "timestamp": "2025-10-20T17:36:02.164772"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 408",
+      "file": "tests/test_interfaces.py",
+      "timestamp": "2025-10-20T17:36:02.164793"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 16",
+      "file": "tests/test_webhook_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.167990"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 54",
+      "file": "tests/test_webhook_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.167999"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 122",
+      "file": "tests/test_webhook_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.168013"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 358",
+      "file": "tests/test_webhook_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.168055"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 373",
+      "file": "tests/test_webhook_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.168059"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 397",
+      "file": "tests/test_webhook_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.168064"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 14",
+      "file": "tests/test_excel_comprehensive.py",
+      "timestamp": "2025-10-20T17:36:02.171277"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 35",
+      "file": "tests/test_remaining_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.172372"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 85",
+      "file": "tests/test_remaining_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.172382"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 161",
+      "file": "tests/test_remaining_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.172395"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 216",
+      "file": "tests/test_remaining_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.172406"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 257",
+      "file": "tests/test_remaining_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.172413"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 285",
+      "file": "tests/test_remaining_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.172420"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 311",
+      "file": "tests/test_remaining_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.172426"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 356",
+      "file": "tests/test_remaining_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.172435"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 402",
+      "file": "tests/test_remaining_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.172445"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 438",
+      "file": "tests/test_remaining_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.172454"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 454",
+      "file": "tests/test_remaining_coverage.py",
+      "timestamp": "2025-10-20T17:36:02.172458"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция render: 55 строк",
+      "file": "templating/engine.py",
+      "timestamp": "2025-10-20T17:36:02.172908"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 15",
+      "file": "templating/engine.py",
+      "timestamp": "2025-10-20T17:36:02.173134"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 48",
+      "file": "templating/engine.py",
+      "timestamp": "2025-10-20T17:36:02.173141"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция __init__: 56 строк",
+      "file": "templating/html_highlighter.py",
+      "timestamp": "2025-10-20T17:36:02.173652"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 5",
+      "file": "templating/html_highlighter.py",
+      "timestamp": "2025-10-20T17:36:02.174216"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 19",
+      "file": "templating/html_highlighter.py",
+      "timestamp": "2025-10-20T17:36:02.174221"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 77",
+      "file": "templating/html_highlighter.py",
+      "timestamp": "2025-10-20T17:36:02.174233"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Класс EventsRepository без docstring",
+      "file": "persistence/events_repository.py",
+      "timestamp": "2025-10-20T17:36:02.174711"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция conn без docstring",
+      "file": "persistence/events_repository.py",
+      "timestamp": "2025-10-20T17:36:02.174727"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция save_event без docstring",
+      "file": "persistence/events_repository.py",
+      "timestamp": "2025-10-20T17:36:02.174745"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция list_events без docstring",
+      "file": "persistence/events_repository.py",
+      "timestamp": "2025-10-20T17:36:02.174788"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 6",
+      "file": "persistence/events_repository.py",
+      "timestamp": "2025-10-20T17:36:02.175062"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 60",
+      "file": "persistence/db.py",
+      "timestamp": "2025-10-20T17:36:02.175446"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 9",
+      "file": "persistence/repository.py",
+      "timestamp": "2025-10-20T17:36:02.175667"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 150",
+      "file": "persistence/repository.py",
+      "timestamp": "2025-10-20T17:36:02.175691"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 222",
+      "file": "persistence/repository.py",
+      "timestamp": "2025-10-20T17:36:02.175704"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 49",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176016"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 54",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176018"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 74",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176023"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 308",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176065"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 357",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176075"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 375",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176079"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 390",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176083"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 413",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176088"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 429",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176092"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 443",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176095"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 455",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176098"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 458",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176099"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 468",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176102"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 471",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176104"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 482",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176106"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 520",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176114"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 531",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176117"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 552",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176121"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 559",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176123"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 614",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176134"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 628",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176137"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 641",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176140"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 654",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176143"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 667",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176146"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 680",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176150"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 690",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176152"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 721",
+      "file": "gui/main_window.py",
+      "timestamp": "2025-10-20T17:36:02.176158"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 30",
+      "file": "gui/typography.py",
+      "timestamp": "2025-10-20T17:36:02.176643"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 38",
+      "file": "gui/typography.py",
+      "timestamp": "2025-10-20T17:36:02.176646"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 53",
+      "file": "gui/typography.py",
+      "timestamp": "2025-10-20T17:36:02.176649"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 65",
+      "file": "gui/typography.py",
+      "timestamp": "2025-10-20T17:36:02.176652"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 68",
+      "file": "gui/typography.py",
+      "timestamp": "2025-10-20T17:36:02.176654"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 32",
+      "file": "gui/layout_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177155"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 35",
+      "file": "gui/layout_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177156"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 38",
+      "file": "gui/layout_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177158"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 50",
+      "file": "gui/layout_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177161"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 53",
+      "file": "gui/layout_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177162"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 62",
+      "file": "gui/layout_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177164"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 65",
+      "file": "gui/layout_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177166"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 73",
+      "file": "gui/layout_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177168"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 18",
+      "file": "gui/animation_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177379"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 21",
+      "file": "gui/animation_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177381"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 30",
+      "file": "gui/animation_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177383"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 66",
+      "file": "gui/animation_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177391"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 69",
+      "file": "gui/animation_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177393"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 76",
+      "file": "gui/animation_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177395"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 113",
+      "file": "gui/animation_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177403"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 116",
+      "file": "gui/animation_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177404"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 123",
+      "file": "gui/animation_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177406"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 170",
+      "file": "gui/animation_utils.py",
+      "timestamp": "2025-10-20T17:36:02.177416"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 56",
+      "file": "gui/design_system.py",
+      "timestamp": "2025-10-20T17:36:02.177939"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 79",
+      "file": "gui/design_system.py",
+      "timestamp": "2025-10-20T17:36:02.177945"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 136",
+      "file": "gui/design_system.py",
+      "timestamp": "2025-10-20T17:36:02.177956"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 146",
+      "file": "gui/design_system.py",
+      "timestamp": "2025-10-20T17:36:02.177959"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 9",
+      "file": "gui/mailer_service.py",
+      "timestamp": "2025-10-20T17:36:02.178297"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 23",
+      "file": "gui/mailer_service.py",
+      "timestamp": "2025-10-20T17:36:02.178301"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 35",
+      "file": "gui/mailer_service.py",
+      "timestamp": "2025-10-20T17:36:02.178305"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 37",
+      "file": "gui/mailer_service.py",
+      "timestamp": "2025-10-20T17:36:02.178306"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 45",
+      "file": "gui/mailer_service.py",
+      "timestamp": "2025-10-20T17:36:02.178309"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 47",
+      "file": "gui/mailer_service.py",
+      "timestamp": "2025-10-20T17:36:02.178310"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 75",
+      "file": "gui/mailer_service.py",
+      "timestamp": "2025-10-20T17:36:02.178316"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 84",
+      "file": "gui/mailer_service.py",
+      "timestamp": "2025-10-20T17:36:02.178320"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 109",
+      "file": "gui/mailer_service.py",
+      "timestamp": "2025-10-20T17:36:02.178325"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 46",
+      "file": "gui/base_window.py",
+      "timestamp": "2025-10-20T17:36:02.178485"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 52",
+      "file": "gui/base_window.py",
+      "timestamp": "2025-10-20T17:36:02.178487"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 213",
+      "file": "gui/base_window.py",
+      "timestamp": "2025-10-20T17:36:02.178520"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 219",
+      "file": "gui/base_window.py",
+      "timestamp": "2025-10-20T17:36:02.178522"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 237",
+      "file": "gui/base_window.py",
+      "timestamp": "2025-10-20T17:36:02.178526"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "TODO/FIXME в строках [120]",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178587"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 6",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178632"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 14",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178634"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 27",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178637"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 29",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178638"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 37",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178641"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 39",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178642"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 47",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178644"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 49",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178645"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 57",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178647"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 69",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178650"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 83",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178653"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 91",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178655"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 93",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178656"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 126",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178663"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 143",
+      "file": "gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.178666"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 10",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178827"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 25",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178831"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 68",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178840"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 70",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178841"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 78",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178844"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 89",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178847"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 115",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178853"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 124",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178856"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 133",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178858"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 144",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178861"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 155",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178864"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 162",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178866"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 317",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178897"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 324",
+      "file": "gui/stats_card.py",
+      "timestamp": "2025-10-20T17:36:02.178900"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 15",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179052"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 20",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179054"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 32",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179057"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 41",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179059"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 48",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179061"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 78",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179067"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 83",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179069"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 97",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179072"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 134",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179079"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 151",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179082"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 202",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179092"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 205",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179093"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 221",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179096"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 224",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179098"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 247",
+      "file": "gui/stats_panel.py",
+      "timestamp": "2025-10-20T17:36:02.179102"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 6",
+      "file": "gui/themed.py",
+      "timestamp": "2025-10-20T17:36:02.179238"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 24",
+      "file": "gui/themed.py",
+      "timestamp": "2025-10-20T17:36:02.179243"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 42",
+      "file": "gui/themed.py",
+      "timestamp": "2025-10-20T17:36:02.179247"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 50",
+      "file": "gui/themed.py",
+      "timestamp": "2025-10-20T17:36:02.179250"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 56",
+      "file": "gui/themed.py",
+      "timestamp": "2025-10-20T17:36:02.179255"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Класс AppleTableDelegate без docstring",
+      "file": "gui/apple_table.py",
+      "timestamp": "2025-10-20T17:36:02.179585"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция paint без docstring",
+      "file": "gui/apple_table.py",
+      "timestamp": "2025-10-20T17:36:02.179624"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция sizeHint без docstring",
+      "file": "gui/apple_table.py",
+      "timestamp": "2025-10-20T17:36:02.179757"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция apply_palette без docstring",
+      "file": "gui/apple_table.py",
+      "timestamp": "2025-10-20T17:36:02.179780"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция viewportEvent без docstring",
+      "file": "gui/apple_table.py",
+      "timestamp": "2025-10-20T17:36:02.179865"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция apply_palette без docstring",
+      "file": "gui/apple_table.py",
+      "timestamp": "2025-10-20T17:36:02.179876"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 9",
+      "file": "gui/apple_table.py",
+      "timestamp": "2025-10-20T17:36:02.180129"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 55",
+      "file": "gui/apple_table.py",
+      "timestamp": "2025-10-20T17:36:02.180139"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Длинная строка (126 символов) в строке 78",
+      "file": "gui/apple_table.py",
+      "timestamp": "2025-10-20T17:36:02.180144"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 90",
+      "file": "gui/apple_table.py",
+      "timestamp": "2025-10-20T17:36:02.180147"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 9",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180498"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 15",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180501"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 42",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180507"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 44",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180508"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 52",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180511"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 70",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180515"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 77",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180517"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 79",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180518"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 87",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180520"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 98",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180523"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 108",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180526"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 118",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180529"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 128",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180531"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 135",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180533"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 153",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180538"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 158",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180539"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 189",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180546"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 196",
+      "file": "gui/switch.py",
+      "timestamp": "2025-10-20T17:36:02.180548"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 11",
+      "file": "gui/error_handling.py",
+      "timestamp": "2025-10-20T17:36:02.180629"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 17",
+      "file": "gui/error_handling.py",
+      "timestamp": "2025-10-20T17:36:02.180631"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 43",
+      "file": "gui/error_handling.py",
+      "timestamp": "2025-10-20T17:36:02.180637"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 49",
+      "file": "gui/error_handling.py",
+      "timestamp": "2025-10-20T17:36:02.180638"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 52",
+      "file": "gui/error_handling.py",
+      "timestamp": "2025-10-20T17:36:02.180640"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 59",
+      "file": "gui/error_handling.py",
+      "timestamp": "2025-10-20T17:36:02.180642"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 61",
+      "file": "gui/error_handling.py",
+      "timestamp": "2025-10-20T17:36:02.180643"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 83",
+      "file": "gui/error_handling.py",
+      "timestamp": "2025-10-20T17:36:02.180648"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 89",
+      "file": "gui/error_handling.py",
+      "timestamp": "2025-10-20T17:36:02.180649"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 92",
+      "file": "gui/error_handling.py",
+      "timestamp": "2025-10-20T17:36:02.180651"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 99",
+      "file": "gui/error_handling.py",
+      "timestamp": "2025-10-20T17:36:02.180653"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 10",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180781"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 21",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180784"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 60",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180792"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 62",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180793"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 70",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180796"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 83",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180799"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 85",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180800"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 93",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180802"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 106",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180805"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 108",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180806"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 116",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180808"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 127",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180812"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 129",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180813"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 137",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180816"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 153",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180830"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 163",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180835"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 170",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180838"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 177",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180840"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 186",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180843"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 219",
+      "file": "gui/progress_ring.py",
+      "timestamp": "2025-10-20T17:36:02.180851"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 35",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181099"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 43",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181102"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 50",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181104"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 59",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181106"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 67",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181109"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 75",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181111"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 101",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181116"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 115",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181119"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 125",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181122"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 127",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181123"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 133",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181125"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 138",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181126"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 148",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181129"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 157",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181131"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 164",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181133"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 167",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181134"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 180",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181137"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 203",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181142"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 226",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181147"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 231",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181148"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 250",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181152"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 257",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181154"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 267",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181157"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 303",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181164"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 315",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181167"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 343",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181172"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 356",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181175"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 376",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181180"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 385",
+      "file": "gui/recipients_view.py",
+      "timestamp": "2025-10-20T17:36:02.181182"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 24",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181374"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 29",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181375"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 47",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181379"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 91",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181388"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 106",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181391"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 126",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181395"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 145",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181399"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 154",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181401"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Длинная строка (137 символов) в строке 158",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181403"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 186",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181409"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 193",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181411"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 205",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181413"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 223",
+      "file": "gui/template_preview.py",
+      "timestamp": "2025-10-20T17:36:02.181417"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "TODO/FIXME в строках [22]",
+      "file": "gui/vibrancy.py",
+      "timestamp": "2025-10-20T17:36:02.181497"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 9",
+      "file": "gui/vibrancy.py",
+      "timestamp": "2025-10-20T17:36:02.181526"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 14",
+      "file": "gui/vibrancy.py",
+      "timestamp": "2025-10-20T17:36:02.181528"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 13",
+      "file": "gui/settings_panel.py",
+      "timestamp": "2025-10-20T17:36:02.181632"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 22",
+      "file": "gui/settings_panel.py",
+      "timestamp": "2025-10-20T17:36:02.181635"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 34",
+      "file": "gui/settings_panel.py",
+      "timestamp": "2025-10-20T17:36:02.181638"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 81",
+      "file": "gui/settings_panel.py",
+      "timestamp": "2025-10-20T17:36:02.181647"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 89",
+      "file": "gui/settings_panel.py",
+      "timestamp": "2025-10-20T17:36:02.181649"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 97",
+      "file": "gui/settings_panel.py",
+      "timestamp": "2025-10-20T17:36:02.181651"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 49",
+      "file": "gui/enhanced_main_window.py",
+      "timestamp": "2025-10-20T17:36:02.182489"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 98",
+      "file": "gui/enhanced_main_window.py",
+      "timestamp": "2025-10-20T17:36:02.182499"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 151",
+      "file": "gui/enhanced_main_window.py",
+      "timestamp": "2025-10-20T17:36:02.182508"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 221",
+      "file": "gui/enhanced_main_window.py",
+      "timestamp": "2025-10-20T17:36:02.182521"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Длинная строка (127 символов) в строке 464",
+      "file": "gui/enhanced_main_window.py",
+      "timestamp": "2025-10-20T17:36:02.182564"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 594",
+      "file": "gui/enhanced_main_window.py",
+      "timestamp": "2025-10-20T17:36:02.182589"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 802",
+      "file": "gui/enhanced_main_window.py",
+      "timestamp": "2025-10-20T17:36:02.182629"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 1144",
+      "file": "gui/enhanced_main_window.py",
+      "timestamp": "2025-10-20T17:36:02.182690"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 1238",
+      "file": "gui/enhanced_main_window.py",
+      "timestamp": "2025-10-20T17:36:02.182707"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Длинная строка (130 символов) в строке 2256",
+      "file": "gui/enhanced_main_window.py",
+      "timestamp": "2025-10-20T17:36:02.182884"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Длинная строка (124 символов) в строке 2267",
+      "file": "gui/enhanced_main_window.py",
+      "timestamp": "2025-10-20T17:36:02.182887"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 7",
+      "file": "gui/log_handler.py",
+      "timestamp": "2025-10-20T17:36:02.183315"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 12",
+      "file": "gui/log_handler.py",
+      "timestamp": "2025-10-20T17:36:02.183317"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 20",
+      "file": "gui/log_handler.py",
+      "timestamp": "2025-10-20T17:36:02.183319"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 30",
+      "file": "gui/log_handler.py",
+      "timestamp": "2025-10-20T17:36:02.183322"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 42",
+      "file": "gui/log_handler.py",
+      "timestamp": "2025-10-20T17:36:02.183325"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 45",
+      "file": "gui/log_handler.py",
+      "timestamp": "2025-10-20T17:36:02.183326"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 9",
+      "file": "gui/styles.py",
+      "timestamp": "2025-10-20T17:36:02.183791"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 12",
+      "file": "gui/styles.py",
+      "timestamp": "2025-10-20T17:36:02.183793"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 38",
+      "file": "gui/styles.py",
+      "timestamp": "2025-10-20T17:36:02.183799"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 9",
+      "file": "gui/app.py",
+      "timestamp": "2025-10-20T17:36:02.184099"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 29",
+      "file": "gui/app.py",
+      "timestamp": "2025-10-20T17:36:02.184104"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 10",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184257"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 18",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184259"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 54",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184267"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 56",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184269"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 64",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184271"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 75",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184273"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 77",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184275"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 85",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184277"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 100",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184280"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 111",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184283"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 121",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184285"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 132",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184288"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 142",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184290"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 152",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184293"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 161",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184295"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 200",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184302"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 208",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184304"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 215",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184306"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 291",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184320"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 298",
+      "file": "gui/text_field.py",
+      "timestamp": "2025-10-20T17:36:02.184322"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 127",
+      "file": "gui/i18n.py",
+      "timestamp": "2025-10-20T17:36:02.184451"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 134",
+      "file": "gui/i18n.py",
+      "timestamp": "2025-10-20T17:36:02.184453"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 143",
+      "file": "gui/i18n.py",
+      "timestamp": "2025-10-20T17:36:02.184456"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 155",
+      "file": "gui/i18n.py",
+      "timestamp": "2025-10-20T17:36:02.184459"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 157",
+      "file": "gui/i18n.py",
+      "timestamp": "2025-10-20T17:36:02.184460"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 165",
+      "file": "gui/i18n.py",
+      "timestamp": "2025-10-20T17:36:02.184462"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 168",
+      "file": "gui/i18n.py",
+      "timestamp": "2025-10-20T17:36:02.184463"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 183",
+      "file": "gui/i18n.py",
+      "timestamp": "2025-10-20T17:36:02.184467"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 11",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184565"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 20",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184567"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 57",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184574"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 59",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184576"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 67",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184578"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 78",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184580"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 80",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184582"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 88",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184584"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 99",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184586"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 110",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184589"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 121",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184591"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 138",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184595"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 149",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184598"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 169",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184602"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 244",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184615"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 251",
+      "file": "gui/components.py",
+      "timestamp": "2025-10-20T17:36:02.184617"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 17",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184737"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 25",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184739"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 57",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184745"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 59",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184746"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 67",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184749"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 78",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184751"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 91",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184754"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 93",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184755"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 101",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184758"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 103",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184759"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 111",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184761"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 118",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184763"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 125",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184765"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 132",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184767"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 147",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184770"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 169",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184774"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 178",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184777"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 188",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184779"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 206",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184783"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 221",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184786"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 272",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184795"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 279",
+      "file": "gui/segmented_control.py",
+      "timestamp": "2025-10-20T17:36:02.184797"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 7",
+      "file": "data_loader/excel_loader.py",
+      "timestamp": "2025-10-20T17:36:02.184886"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 12",
+      "file": "data_loader/excel_loader.py",
+      "timestamp": "2025-10-20T17:36:02.184887"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 15",
+      "file": "data_loader/excel_loader.py",
+      "timestamp": "2025-10-20T17:36:02.184889"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 7",
+      "file": "data_loader/csv_loader.py",
+      "timestamp": "2025-10-20T17:36:02.184998"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 12",
+      "file": "data_loader/csv_loader.py",
+      "timestamp": "2025-10-20T17:36:02.185000"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 15",
+      "file": "data_loader/csv_loader.py",
+      "timestamp": "2025-10-20T17:36:02.185001"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 15",
+      "file": "data_loader/streaming.py",
+      "timestamp": "2025-10-20T17:36:02.185086"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 21",
+      "file": "data_loader/streaming.py",
+      "timestamp": "2025-10-20T17:36:02.185088"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 60",
+      "file": "data_loader/streaming.py",
+      "timestamp": "2025-10-20T17:36:02.185096"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 66",
+      "file": "data_loader/streaming.py",
+      "timestamp": "2025-10-20T17:36:02.185098"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 111",
+      "file": "data_loader/streaming.py",
+      "timestamp": "2025-10-20T17:36:02.185106"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 117",
+      "file": "data_loader/streaming.py",
+      "timestamp": "2025-10-20T17:36:02.185108"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 178",
+      "file": "data_loader/streaming.py",
+      "timestamp": "2025-10-20T17:36:02.185120"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 7",
+      "file": "data_loader/json_loader.py",
+      "timestamp": "2025-10-20T17:36:02.185182"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 12",
+      "file": "data_loader/json_loader.py",
+      "timestamp": "2025-10-20T17:36:02.185184"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 15",
+      "file": "data_loader/json_loader.py",
+      "timestamp": "2025-10-20T17:36:02.185185"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 6",
+      "file": "data_loader/base.py",
+      "timestamp": "2025-10-20T17:36:02.185256"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 13",
+      "file": "data_loader/base.py",
+      "timestamp": "2025-10-20T17:36:02.185258"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 16",
+      "file": "data_loader/base.py",
+      "timestamp": "2025-10-20T17:36:02.185260"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 23",
+      "file": "data_loader/base.py",
+      "timestamp": "2025-10-20T17:36:02.185262"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 27",
+      "file": "data_loader/base.py",
+      "timestamp": "2025-10-20T17:36:02.185263"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция detect_sf_pro без docstring",
+      "file": "tk_gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.185419"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция apply_font без docstring",
+      "file": "tk_gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.185446"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция set_theme без docstring",
+      "file": "tk_gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.185506"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 29",
+      "file": "tk_gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.185616"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 37",
+      "file": "tk_gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.185619"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 55",
+      "file": "tk_gui/theme.py",
+      "timestamp": "2025-10-20T17:36:02.185623"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Класс FadeInController без docstring",
+      "file": "tk_gui/visual_fx.py",
+      "timestamp": "2025-10-20T17:36:02.185914"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Класс PulseBar без docstring",
+      "file": "tk_gui/visual_fx.py",
+      "timestamp": "2025-10-20T17:36:02.185917"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция start без docstring",
+      "file": "tk_gui/visual_fx.py",
+      "timestamp": "2025-10-20T17:36:02.185945"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция start без docstring",
+      "file": "tk_gui/visual_fx.py",
+      "timestamp": "2025-10-20T17:36:02.186012"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция stop без docstring",
+      "file": "tk_gui/visual_fx.py",
+      "timestamp": "2025-10-20T17:36:02.186033"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция run без docstring",
+      "file": "tk_gui/visual_fx.py",
+      "timestamp": "2025-10-20T17:36:02.186113"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 8",
+      "file": "tk_gui/visual_fx.py",
+      "timestamp": "2025-10-20T17:36:02.186299"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 39",
+      "file": "tk_gui/visual_fx.py",
+      "timestamp": "2025-10-20T17:36:02.186305"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Класс CampaignThread без docstring",
+      "file": "tk_gui/app.py",
+      "timestamp": "2025-10-20T17:36:02.187447"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Класс App без docstring",
+      "file": "tk_gui/app.py",
+      "timestamp": "2025-10-20T17:36:02.187451"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция main без docstring",
+      "file": "tk_gui/app.py",
+      "timestamp": "2025-10-20T17:36:02.187453"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция run без docstring",
+      "file": "tk_gui/app.py",
+      "timestamp": "2025-10-20T17:36:02.187526"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция _build_ui: 77 строк",
+      "file": "tk_gui/app.py",
+      "timestamp": "2025-10-20T17:36:02.187604"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция update_progress без docstring",
+      "file": "tk_gui/app.py",
+      "timestamp": "2025-10-20T17:36:02.188176"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Функция finish_campaign без docstring",
+      "file": "tk_gui/app.py",
+      "timestamp": "2025-10-20T17:36:02.188219"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 19",
+      "file": "tk_gui/app.py",
+      "timestamp": "2025-10-20T17:36:02.189090"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 68",
+      "file": "tk_gui/app.py",
+      "timestamp": "2025-10-20T17:36:02.189099"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 260",
+      "file": "tk_gui/app.py",
+      "timestamp": "2025-10-20T17:36:02.189131"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 265",
+      "file": "tk_gui/app.py",
+      "timestamp": "2025-10-20T17:36:02.189133"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 7",
+      "file": "stats/aggregator.py",
+      "timestamp": "2025-10-20T17:36:02.190109"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 18",
+      "file": "stats/aggregator.py",
+      "timestamp": "2025-10-20T17:36:02.190112"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 31",
+      "file": "stats/aggregator.py",
+      "timestamp": "2025-10-20T17:36:02.190116"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 36",
+      "file": "stats/aggregator.py",
+      "timestamp": "2025-10-20T17:36:02.190117"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 38",
+      "file": "stats/aggregator.py",
+      "timestamp": "2025-10-20T17:36:02.190118"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 47",
+      "file": "stats/aggregator.py",
+      "timestamp": "2025-10-20T17:36:02.190121"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 60",
+      "file": "stats/aggregator.py",
+      "timestamp": "2025-10-20T17:36:02.190124"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 5",
+      "file": "validation/email_validator.py",
+      "timestamp": "2025-10-20T17:36:02.190430"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 16",
+      "file": "resend/client.py",
+      "timestamp": "2025-10-20T17:36:02.190598"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 53",
+      "file": "resend/client.py",
+      "timestamp": "2025-10-20T17:36:02.190605"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Длинная строка (121 символов) в строке 175",
+      "file": "resend/client.py",
+      "timestamp": "2025-10-20T17:36:02.190627"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 241",
+      "file": "resend/client.py",
+      "timestamp": "2025-10-20T17:36:02.190639"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 11",
+      "file": "resend/rate_limiter.py",
+      "timestamp": "2025-10-20T17:36:02.190838"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 33",
+      "file": "resend/rate_limiter.py",
+      "timestamp": "2025-10-20T17:36:02.190843"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 8",
+      "file": "resend/retry.py",
+      "timestamp": "2025-10-20T17:36:02.191326"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 37",
+      "file": "resend/retry.py",
+      "timestamp": "2025-10-20T17:36:02.191333"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 59",
+      "file": "resend/retry.py",
+      "timestamp": "2025-10-20T17:36:02.191338"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 72",
+      "file": "resend/retry.py",
+      "timestamp": "2025-10-20T17:36:02.191341"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 20",
+      "file": "mailing/sender.py",
+      "timestamp": "2025-10-20T17:36:02.192561"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 31",
+      "file": "mailing/sender.py",
+      "timestamp": "2025-10-20T17:36:02.192564"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 72",
+      "file": "mailing/sender.py",
+      "timestamp": "2025-10-20T17:36:02.192572"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 252",
+      "file": "mailing/sender.py",
+      "timestamp": "2025-10-20T17:36:02.192603"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 9",
+      "file": "mailing/config.py",
+      "timestamp": "2025-10-20T17:36:02.193189"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 33",
+      "file": "mailing/config.py",
+      "timestamp": "2025-10-20T17:36:02.193194"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 39",
+      "file": "mailing/config.py",
+      "timestamp": "2025-10-20T17:36:02.193197"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 44",
+      "file": "mailing/config.py",
+      "timestamp": "2025-10-20T17:36:02.193199"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 86",
+      "file": "mailing/config.py",
+      "timestamp": "2025-10-20T17:36:02.193208"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 10",
+      "file": "mailing/logging_config.py",
+      "timestamp": "2025-10-20T17:36:02.193307"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 13",
+      "file": "mailing/logging_config.py",
+      "timestamp": "2025-10-20T17:36:02.193308"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 16",
+      "file": "mailing/logging_config.py",
+      "timestamp": "2025-10-20T17:36:02.193310"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 38",
+      "file": "mailing/logging_config.py",
+      "timestamp": "2025-10-20T17:36:02.193315"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 41",
+      "file": "mailing/logging_config.py",
+      "timestamp": "2025-10-20T17:36:02.193317"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 44",
+      "file": "mailing/logging_config.py",
+      "timestamp": "2025-10-20T17:36:02.193318"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 53",
+      "file": "mailing/logging_config.py",
+      "timestamp": "2025-10-20T17:36:02.193321"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 6",
+      "file": "mailing/models.py",
+      "timestamp": "2025-10-20T17:36:02.193723"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 40",
+      "file": "mailing/models.py",
+      "timestamp": "2025-10-20T17:36:02.193731"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 51",
+      "file": "mailing/models.py",
+      "timestamp": "2025-10-20T17:36:02.193734"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 63",
+      "file": "mailing/models.py",
+      "timestamp": "2025-10-20T17:36:02.193737"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 29",
+      "file": "mailing/cli.py",
+      "timestamp": "2025-10-20T17:36:02.194009"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 32",
+      "file": "mailing/cli.py",
+      "timestamp": "2025-10-20T17:36:02.194011"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 69",
+      "file": "mailing/cli.py",
+      "timestamp": "2025-10-20T17:36:02.194019"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 114",
+      "file": "mailing/cli.py",
+      "timestamp": "2025-10-20T17:36:02.194029"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 117",
+      "file": "mailing/cli.py",
+      "timestamp": "2025-10-20T17:36:02.194030"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 137",
+      "file": "mailing/cli.py",
+      "timestamp": "2025-10-20T17:36:02.194035"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 140",
+      "file": "mailing/cli.py",
+      "timestamp": "2025-10-20T17:36:02.194036"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 174",
+      "file": "mailing/cli.py",
+      "timestamp": "2025-10-20T17:36:02.194044"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 177",
+      "file": "mailing/cli.py",
+      "timestamp": "2025-10-20T17:36:02.194045"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 248",
+      "file": "mailing/cli.py",
+      "timestamp": "2025-10-20T17:36:02.194058"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 14",
+      "file": "mailing/webhook_server.py",
+      "timestamp": "2025-10-20T17:36:02.194647"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 21",
+      "file": "mailing/webhook_server.py",
+      "timestamp": "2025-10-20T17:36:02.194650"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 25",
+      "file": "mailing/webhook_server.py",
+      "timestamp": "2025-10-20T17:36:02.194652"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 31",
+      "file": "mailing/webhook_server.py",
+      "timestamp": "2025-10-20T17:36:02.194654"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 34",
+      "file": "mailing/webhook_server.py",
+      "timestamp": "2025-10-20T17:36:02.194656"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 38",
+      "file": "mailing/webhook_server.py",
+      "timestamp": "2025-10-20T17:36:02.194657"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 53",
+      "file": "mailing/webhook_server.py",
+      "timestamp": "2025-10-20T17:36:02.194661"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 106",
+      "file": "mailing/webhook_server.py",
+      "timestamp": "2025-10-20T17:36:02.194672"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 113",
+      "file": "mailing/webhook_server.py",
+      "timestamp": "2025-10-20T17:36:02.194674"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Длинная функция validate_env: 56 строк",
+      "file": "mailing/preflight.py",
+      "timestamp": "2025-10-20T17:36:02.195134"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Сложная функция validate_env: 12 ветвлений",
+      "file": "mailing/preflight.py",
+      "timestamp": "2025-10-20T17:36:02.195288"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 6",
+      "file": "mailing/preflight.py",
+      "timestamp": "2025-10-20T17:36:02.195438"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 65",
+      "file": "mailing/preflight.py",
+      "timestamp": "2025-10-20T17:36:02.195451"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 13",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195646"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 26",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195649"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 34",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195651"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 55",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195655"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 57",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195656"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 65",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195658"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 81",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195662"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 84",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195663"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 93",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195666"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 108",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195669"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 110",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195670"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 119",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195672"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 121",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195674"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 131",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195676"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 133",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195678"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Trailing whitespace в строке 141",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195680"
+    },
+    {
+      "level": "minor",
+      "category": "style",
+      "message": "Множественные пустые строки в строке 158",
+      "file": "mailing/limits/daily_quota.py",
+      "timestamp": "2025-10-20T17:36:02.195684"
+    },
+    {
+      "level": "major",
+      "category": "security",
+      "message": "Потенциальная SQL инъекция в строке 290",
+      "file": "comprehensive_audit.py",
+      "timestamp": "2025-10-20T17:36:02.258471"
+    },
+    {
+      "level": "major",
+      "category": "security",
+      "message": "Потенциальная SQL инъекция в строке 189",
+      "file": "deep_analysis.py",
+      "timestamp": "2025-10-20T17:36:02.258859"
+    },
+    {
+      "level": "major",
+      "category": "security",
+      "message": "Потенциальная SQL инъекция в строке 196",
+      "file": "deep_analysis.py",
+      "timestamp": "2025-10-20T17:36:02.258864"
+    },
+    {
+      "level": "major",
+      "category": "security",
+      "message": "Потенциальная SQL инъекция в строке 202",
+      "file": "deep_analysis.py",
+      "timestamp": "2025-10-20T17:36:02.258869"
+    },
+    {
+      "level": "major",
+      "category": "security",
+      "message": ".env файл в репозитории (должен быть в .gitignore)",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:02.260794"
+    },
+    {
+      "level": "minor",
+      "category": "dependencies",
+      "message": "Дублирование зависимостей в requirements.txt и pyproject.toml",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:02.261030"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: os",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.303878"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: List",
+      "file": "fix_syntax.py",
+      "timestamp": "2025-10-20T17:36:02.303882"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: os",
+      "file": "fix_whitespace.py",
+      "timestamp": "2025-10-20T17:36:02.304670"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: List",
+      "file": "fix_whitespace.py",
+      "timestamp": "2025-10-20T17:36:02.304671"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: Tuple",
+      "file": "fix_whitespace.py",
+      "timestamp": "2025-10-20T17:36:02.304672"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: os",
+      "file": "create_release.py",
+      "timestamp": "2025-10-20T17:36:02.305100"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: os",
+      "file": "minimal_web_gui.py",
+      "timestamp": "2025-10-20T17:36:02.305409"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: sys",
+      "file": "minimal_web_gui.py",
+      "timestamp": "2025-10-20T17:36:02.305410"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: annotations",
+      "file": "run_gui.py",
+      "timestamp": "2025-10-20T17:36:02.306038"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: DeliveryRepository",
+      "file": "show_real_status.py",
+      "timestamp": "2025-10-20T17:36:02.306916"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: SuppressionRepository",
+      "file": "show_real_status.py",
+      "timestamp": "2025-10-20T17:36:02.306918"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: json",
+      "file": "show_real_status.py",
+      "timestamp": "2025-10-20T17:36:02.306919"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: json",
+      "file": "real_time_monitor.py",
+      "timestamp": "2025-10-20T17:36:02.308259"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: time",
+      "file": "real_time_monitor.py",
+      "timestamp": "2025-10-20T17:36:02.308260"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: json",
+      "file": "real_email_test.py",
+      "timestamp": "2025-10-20T17:36:02.312013"
+    },
+    {
+      "level": "minor",
+      "category": "code_quality",
+      "message": "Возможно неиспользуемый импорт: CSVLoader",
+      "file": "real_email_test.py",
+      "timestamp": "2025-10-20T17:36:02.312015"
+    },
+    {
+      "level": "minor",
+      "category": "testing",
+      "message": "Нет тестовых функций в test_resend_client.py",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:02.312381"
+    },
+    {
+      "level": "minor",
+      "category": "testing",
+      "message": "Нет тестовых функций в test_campaign_dryrun.py",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:02.312509"
+    },
+    {
+      "level": "major",
+      "category": "testing",
+      "message": "Ошибка анализа test_template_persistence.py: EOL while scanning string literal (<unknown>, line 50)",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:02.314101"
+    },
+    {
+      "level": "minor",
+      "category": "testing",
+      "message": "Мало тестов в test_core.py: 2",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:02.314482"
+    },
+    {
+      "level": "major",
+      "category": "testing",
+      "message": "Ошибка анализа test_remaining_coverage.py: EOL while scanning string literal (<unknown>, line 23)",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:02.329591"
+    },
+    {
+      "level": "major",
+      "category": "testing",
+      "message": "Ошибки сборки тестов: ",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.361854"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "В README отсутствует Раздел установки",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.362179"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "В README отсутствует Раздел использования",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.362192"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "В README отсутствует Требования",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.362204"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Рекомендуется добавить CONTRIBUTING.md: Руководство для разработчиков",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.362241"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Рекомендуется добавить SECURITY.md: Политика безопасности",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.362253"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Рекомендуется добавить API.md: Документация API",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.362261"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Нет module docstring в mailing",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.362288"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Нет module docstring в templating",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.362315"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Нет module docstring в persistence",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.362337"
+    },
+    {
+      "level": "minor",
+      "category": "documentation",
+      "message": "Нет module docstring в validation",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.362369"
+    },
+    {
+      "level": "minor",
+      "category": "database",
+      "message": "Таблица deliveries без индексов (8 колонок)",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.364161"
+    },
+    {
+      "level": "minor",
+      "category": "database",
+      "message": "Колонка sqlite_sequence.name без типа данных",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.364192"
+    },
+    {
+      "level": "minor",
+      "category": "database",
+      "message": "Колонка sqlite_sequence.seq без типа данных",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.364193"
+    },
+    {
+      "level": "minor",
+      "category": "database",
+      "message": "Таблица events без индексов (8 колонок)",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.364220"
+    },
+    {
+      "level": "minor",
+      "category": "database",
+      "message": "Foreign keys не включены в mailing.sqlite3",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.364287"
+    },
+    {
+      "level": "minor",
+      "category": "database",
+      "message": "Неоптимальный journal_mode в mailing.sqlite3: delete",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.364295"
+    },
+    {
+      "level": "major",
+      "category": "database",
+      "message": "Ошибка анализа БД test_mailing.sqlite3-shm: file is not a database",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.365288"
+    },
+    {
+      "level": "minor",
+      "category": "database",
+      "message": "Foreign keys не включены в test_mailing.sqlite3-wal",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.365420"
+    },
+    {
+      "level": "minor",
+      "category": "database",
+      "message": "Неоптимальный journal_mode в test_mailing.sqlite3-wal: delete",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.365423"
+    },
+    {
+      "level": "minor",
+      "category": "database",
+      "message": "Таблица deliveries без индексов (8 колонок)",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.365818"
+    },
+    {
+      "level": "minor",
+      "category": "database",
+      "message": "Колонка sqlite_sequence.name без типа данных",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.365840"
+    },
+    {
+      "level": "minor",
+      "category": "database",
+      "message": "Колонка sqlite_sequence.seq без типа данных",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.365841"
+    },
+    {
+      "level": "minor",
+      "category": "database",
+      "message": "Foreign keys не включены в test_mailing.sqlite3",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.366058"
+    },
+    {
+      "level": "minor",
+      "category": "performance",
+      "message": "Очень большой файл: test_mailing.sqlite3 (2.0 MB)",
+      "file": null,
+      "timestamp": "2025-10-20T17:36:03.441005"
+    }
+  ],
+  "suggestions": [],
+  "stats": {
+    "code_quality": {
+      "total_lines": 23976,
+      "total_functions": 317,
+      "documented_functions": 265,
+      "doc_coverage": 83.59621451104101,
+      "total_classes": 72,
+      "classes_with_docstrings": 62,
+      "class_doc_coverage": 86.11111111111111,
+      "files_with_todos": 3,
+      "long_functions": 32,
+      "complex_functions": 13
+    }
+  }
+}

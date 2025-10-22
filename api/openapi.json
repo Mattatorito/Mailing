@@ -1,0 +1,618 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Professional Email Marketing Tool API",
+    "description": "REST API для управления email кампаниями и обработки webhook событий",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Email Marketing Tool Team",
+      "email": "support@example.com",
+      "url": "https://github.com/your-org/email-marketing-tool"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Development server"
+    },
+    {
+      "url": "https://api.example.com",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Информация о сервисе",
+        "description": "Возвращает базовую информацию о сервисе и доступных endpoints",
+        "operationId": "getServiceInfo",
+        "tags": ["System"],
+        "responses": {
+          "200": {
+            "description": "Информация о сервисе",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceInfo"
+                },
+                "example": {
+                  "service": "Professional Email Marketing Tool",
+                  "version": "1.0.0",
+                  "description": "Webhook server for processing email delivery events",
+                  "endpoints": ["/health", "/webhook/resend"],
+                  "documentation": "/api/docs"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "description": "Проверка состояния сервиса и его компонентов",
+        "operationId": "healthCheck",
+        "tags": ["System"],
+        "responses": {
+          "200": {
+            "description": "Сервис работает нормально",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                },
+                "example": {
+                  "status": "healthy",
+                  "timestamp": "2024-01-20T10:30:00Z",
+                  "version": "1.0.0",
+                  "environment": "production",
+                  "checks": {
+                    "database": "healthy",
+                    "email_service": "healthy",
+                    "disk_space": "healthy"
+                  },
+                  "metrics": {
+                    "uptime": "24h 15m 30s",
+                    "requests_total": 15432,
+                    "requests_per_second": 12.5,
+                    "error_rate": 0.02
+                  }
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Сервис недоступен",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/webhook/resend": {
+      "post": {
+        "summary": "Обработка Resend webhooks",
+        "description": "Endpoint для обработки webhook событий от сервиса Resend",
+        "operationId": "handleResendWebhook",
+        "tags": ["Webhooks"],
+        "security": [
+          {
+            "webhookSignature": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Resend-Signature",
+            "in": "header",
+            "required": true,
+            "description": "HMAC-SHA256 подпись для верификации webhook",
+            "schema": {
+              "type": "string",
+              "example": "sha256=abcdef123456..."
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WebhookEvent"
+              },
+              "examples": {
+                "email_delivered": {
+                  "summary": "Email доставлен",
+                  "value": {
+                    "type": "email.delivered",
+                    "created_at": "2024-01-20T10:30:00.000Z",
+                    "data": {
+                      "id": "550e8400-e29b-41d4-a716-446655440000",
+                      "object": "email",
+                      "to": ["recipient@example.com"],
+                      "from": "sender@example.com",
+                      "subject": "Test Email",
+                      "delivered_at": "2024-01-20T10:30:05.000Z"
+                    }
+                  }
+                },
+                "email_bounced": {
+                  "summary": "Email отклонен",
+                  "value": {
+                    "type": "email.bounced",
+                    "created_at": "2024-01-20T10:30:00.000Z",
+                    "data": {
+                      "id": "550e8400-e29b-41d4-a716-446655440000",
+                      "object": "email",
+                      "to": ["invalid@example.com"],
+                      "bounce_type": "permanent",
+                      "bounce_reason": "mailbox_not_found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Событие обработано успешно",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WebhookResponse"
+                },
+                "example": {
+                  "status": "success",
+                  "message": "Event processed successfully",
+                  "event_id": "evt_123456789"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Неверный формат запроса",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Неверная подпись webhook",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Внутренняя ошибка сервера",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ServiceInfo": {
+        "type": "object",
+        "properties": {
+          "service": {
+            "type": "string",
+            "description": "Название сервиса"
+          },
+          "version": {
+            "type": "string",
+            "description": "Версия сервиса"
+          },
+          "description": {
+            "type": "string",
+            "description": "Описание сервиса"
+          },
+          "endpoints": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Список доступных endpoints"
+          },
+          "documentation": {
+            "type": "string",
+            "description": "Ссылка на документацию"
+          }
+        },
+        "required": ["service", "version"]
+      },
+      "HealthResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["healthy", "unhealthy", "degraded"],
+            "description": "Общий статус системы"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Время проверки"
+          },
+          "version": {
+            "type": "string",
+            "description": "Версия приложения"
+          },
+          "environment": {
+            "type": "string",
+            "enum": ["development", "staging", "production"],
+            "description": "Окружение"
+          },
+          "checks": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "enum": ["healthy", "unhealthy"]
+            },
+            "description": "Статус отдельных компонентов"
+          },
+          "metrics": {
+            "type": "object",
+            "properties": {
+              "uptime": {
+                "type": "string",
+                "description": "Время работы системы"
+              },
+              "requests_total": {
+                "type": "integer",
+                "description": "Общее количество запросов"
+              },
+              "requests_per_second": {
+                "type": "number",
+                "format": "float",
+                "description": "Количество запросов в секунду"
+              },
+              "error_rate": {
+                "type": "number",
+                "format": "float",
+                "description": "Процент ошибок"
+              }
+            }
+          }
+        },
+        "required": ["status", "timestamp"]
+      },
+      "WebhookEvent": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "email.sent",
+              "email.delivered",
+              "email.delivery_delayed",
+              "email.complained",
+              "email.bounced",
+              "email.clicked",
+              "email.opened"
+            ],
+            "description": "Тип события"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Время создания события"
+          },
+          "data": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/EmailSentData"
+              },
+              {
+                "$ref": "#/components/schemas/EmailDeliveredData"
+              },
+              {
+                "$ref": "#/components/schemas/EmailBouncedData"
+              },
+              {
+                "$ref": "#/components/schemas/EmailClickedData"
+              },
+              {
+                "$ref": "#/components/schemas/EmailOpenedData"
+              }
+            ],
+            "description": "Event-specific data based on event type"
+          }
+        },
+        "required": ["type", "created_at", "data"]
+      },
+      "EmailSentData": {
+        "type": "object",
+        "description": "Data for email.sent events",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Уникальный идентификатор email"
+          },
+          "object": {
+            "type": "string",
+            "enum": ["email"],
+            "description": "Тип объекта"
+          },
+          "to": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "email"
+            },
+            "description": "Получатели"
+          },
+          "from": {
+            "type": "string",
+            "format": "email",
+            "description": "Отправитель"
+          },
+          "subject": {
+            "type": "string",
+            "description": "Тема письма"
+          }
+        },
+        "required": ["id", "object", "to", "from", "subject"]
+      },
+      "EmailDeliveredData": {
+        "type": "object",
+        "description": "Data for email.delivered events",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Уникальный идентификатор email"
+          },
+          "object": {
+            "type": "string",
+            "enum": ["email"],
+            "description": "Тип объекта"
+          },
+          "to": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "email"
+            },
+            "description": "Получатели"
+          },
+          "from": {
+            "type": "string",
+            "format": "email",
+            "description": "Отправитель"
+          },
+          "subject": {
+            "type": "string",
+            "description": "Тема письма"
+          },
+          "delivered_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Время доставки"
+          }
+        },
+        "required": ["id", "object", "to", "from", "subject", "delivered_at"]
+      },
+      "EmailBouncedData": {
+        "type": "object",
+        "description": "Data for email.bounced events",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Уникальный идентификатор email"
+          },
+          "object": {
+            "type": "string",
+            "enum": ["email"],
+            "description": "Тип объекта"
+          },
+          "to": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "email"
+            },
+            "description": "Получатели"
+          },
+          "from": {
+            "type": "string",
+            "format": "email",
+            "description": "Отправитель"
+          },
+          "subject": {
+            "type": "string",
+            "description": "Тема письма"
+          },
+          "bounce_type": {
+            "type": "string",
+            "enum": ["permanent", "temporary"],
+            "description": "Тип отклонения"
+          },
+          "bounce_reason": {
+            "type": "string",
+            "description": "Причина отклонения"
+          }
+        },
+        "required": ["id", "object", "to", "from", "subject", "bounce_type", "bounce_reason"]
+      },
+      "EmailClickedData": {
+        "type": "object",
+        "description": "Data for email.clicked events",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Уникальный идентификатор email"
+          },
+          "object": {
+            "type": "string",
+            "enum": ["email"],
+            "description": "Тип объекта"
+          },
+          "to": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "email"
+            },
+            "description": "Получатели"
+          },
+          "from": {
+            "type": "string",
+            "format": "email",
+            "description": "Отправитель"
+          },
+          "subject": {
+            "type": "string",
+            "description": "Тема письма"
+          },
+          "click_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL на который был совершен клик"
+          },
+          "clicked_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Время клика"
+          }
+        },
+        "required": ["id", "object", "to", "from", "subject", "click_url", "clicked_at"]
+      },
+      "EmailOpenedData": {
+        "type": "object",
+        "description": "Data for email.opened events",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Уникальный идентификатор email"
+          },
+          "object": {
+            "type": "string",
+            "enum": ["email"],
+            "description": "Тип объекта"
+          },
+          "to": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "email"
+            },
+            "description": "Получатели"
+          },
+          "from": {
+            "type": "string",
+            "format": "email",
+            "description": "Отправитель"
+          },
+          "subject": {
+            "type": "string",
+            "description": "Тема письма"
+          },
+          "opened_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Время открытия"
+          }
+        },
+        "required": ["id", "object", "to", "from", "subject", "opened_at"]
+      },
+      "WebhookResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["success", "error"],
+            "description": "Статус обработки"
+          },
+          "message": {
+            "type": "string",
+            "description": "Сообщение о результате"
+          },
+          "event_id": {
+            "type": "string",
+            "description": "Идентификатор обработанного события"
+          }
+        },
+        "required": ["status", "message"]
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "description": "Код ошибки"
+              },
+              "message": {
+                "type": "string",
+                "description": "Описание ошибки"
+              },
+              "details": {
+                "type": "object",
+                "description": "Дополнительные детали ошибки"
+              }
+            },
+            "required": ["code", "message"]
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Время возникновения ошибки"
+          }
+        },
+        "required": ["error", "timestamp"]
+      }
+    },
+    "securitySchemes": {
+      "webhookSignature": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Resend-Signature",
+        "description": "HMAC-SHA256 подпись для верификации webhook запросов"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "System",
+      "description": "Системные endpoints для мониторинга и информации"
+    },
+    {
+      "name": "Webhooks",
+      "description": "Endpoints для обработки webhook событий"
+    }
+  ],
+  "externalDocs": {
+    "description": "Полная документация API",
+    "url": "https://github.com/your-org/email-marketing-tool/blob/main/API_DOCUMENTATION.md"
+  }
+}
